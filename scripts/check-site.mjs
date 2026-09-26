@@ -18,7 +18,7 @@ for (const asset of ['favicon.svg', 'og.png', 'Satyajit-Senapati-Resume.pdf', '.
 }
 
 for (const [, reference] of html.matchAll(/(?:src|href)="(\.\/[^\"]+)"/g)) {
-  const target = path.resolve('dist', reference);
+  const target = path.resolve('dist', reference.split(/[?#]/, 1)[0]);
   if (!fs.existsSync(target)) throw new Error(`Broken built asset reference: ${reference}`);
 }
 
