@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.tmp-pdf/
+.tmp-audit/
+*.tsbuildinfo
+.DS_Store
+Data_Engineer_v4.pdf
