@@ -42,7 +42,7 @@ export const experience: Experience[] = [
     role: 'Lead Azure Data & AI Engineer',
     organization: 'Cognizant Technology Solutions',
     client: 'Optum',
-    summary: 'Leading cloud-native data, AI, and enterprise search delivery across Azure and .NET.',
+    summary: 'Leading Synapse source onboarding, RAG applications, and Elasticsearch search, with Azure delivery automated through Terraform and GitHub Actions.',
     highlights: [
       'Designed Synapse pipelines that ingest from SQL Server, SharePoint Lists, Adobe Analytics, REST APIs, and ADLS.',
       'Built reusable BTS and STG pipeline frameworks to reduce onboarding effort for new data sources.',
@@ -56,7 +56,7 @@ export const experience: Experience[] = [
     role: 'Azure Data Engineer',
     organization: 'Microland',
     client: 'Mandai',
-    summary: 'Built configuration-driven Databricks workflows for lakehouse ingestion and transformation.',
+    summary: 'Built metadata-driven Databricks workflows and Delta Lake transformations, including full and incremental loads from ADLS.',
     highlights: [
       'Implemented full and incremental ingestion from ADLS into Delta Lake using PySpark and Spark SQL.',
       'Created modular parent–child notebooks and metadata-driven orchestration for Fact and Dimension tables.',
@@ -69,7 +69,7 @@ export const experience: Experience[] = [
     role: 'Azure Databricks Engineer',
     organization: 'TEKsystems Global Services',
     client: 'Spreetail',
-    summary: 'Engineered lakehouse pipelines and dimensional models for commerce analytics.',
+    summary: 'Built Raw, Bronze, and Silver lakehouse pipelines and dimensional models across Azure SQL, AWS S3, and ADLS.',
     highlights: [
       'Designed ingestion from Azure SQL, AWS S3, and ADLS into Raw, Bronze, and Silver layers.',
       'Built reusable notebooks, Fact and Dimension models, Synapse worker pipelines, and audit frameworks.',
@@ -82,7 +82,7 @@ export const experience: Experience[] = [
     role: 'Database, Big Data & Azure Engineering',
     organization: 'Tata Consultancy Services',
     client: 'Ericsson',
-    summary: 'Progressed from database administration to big data development and Azure Databricks engineering.',
+    summary: 'Progressed from database administration to Spark ETL, predictive models, and Azure Databricks and Delta Lake pipelines.',
     highlights: [
       'Built large-scale Spark and Python ETL pipelines and curated datasets from AWS S3.',
       'Developed traffic prediction, anomaly detection, and fault management models using Spark and Scikit-learn.',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     kind: 'LEARNING SYSTEM',
     positioning: 'A local-first workspace for technical interview preparation.',
     description: 'Brings structured study guides, question banks, and progress tracking together for data, cloud, AI, and coding topics.',
-    details: ['Structured Study guides and question banks', 'Browser-local notes, bookmarks, and progress', 'Offline-ready core learning experience'],
+    details: ['Structured study guides and question banks', 'Browser-local notes, bookmarks, and progress', 'Offline-ready core learning experience'],
     technologies: ['React', 'TypeScript', 'IndexedDB'],
   },
   {
@@ -162,10 +162,10 @@ export const architecturePatterns: ArchitecturePattern[] = [
 ];
 
 export const expertise = [
-  { number: '01', title: 'Data Engineering', items: ['Apache Spark', 'PySpark', 'SQL', 'Delta Lake', 'ETL / ELT', 'Data Vault 2.0', 'Dimensional modeling'] },
-  { number: '02', title: 'Azure Data Platform', items: ['Azure Databricks', 'Data Factory', 'Synapse Analytics', 'ADLS Gen2', 'Azure Functions', 'Azure ML'] },
-  { number: '03', title: 'AI & Intelligent Search', items: ['OpenAI APIs', 'RAG', 'LLM integration', 'Vector search', 'Semantic search', 'Elasticsearch', 'AI agent workflows'] },
-  { number: '04', title: 'Software & Delivery', items: ['Python', '.NET', 'C#', 'ASP.NET Core', 'Blazor', 'REST APIs', 'Terraform', 'CI/CD'] },
+  { number: '01', title: 'Data Engineering', summary: 'Build reusable ingestion, lakehouse transformations, and dimensional models from diverse enterprise sources.', items: ['Apache Spark', 'PySpark', 'SQL', 'Delta Lake', 'ETL / ELT', 'Data Vault 2.0', 'Dimensional Modeling'] },
+  { number: '02', title: 'Azure Data Platform', summary: 'Connect SQL Server, SharePoint, Adobe Analytics, REST APIs, and storage through Azure pipelines.', items: ['Azure Databricks', 'Data Factory', 'Synapse Analytics', 'ADLS Gen2', 'Azure Functions', 'Azure ML'] },
+  { number: '03', title: 'AI & Intelligent Search', summary: 'Deliver RAG applications, AI agent workflows, and Elasticsearch-powered enterprise search.', items: ['OpenAI APIs', 'RAG', 'LLM Integration', 'Vector Search', 'Semantic Search', 'Elasticsearch', 'AI Agent Workflows'] },
+  { number: '04', title: 'Software & Delivery', summary: 'Turn architecture into applications and repeatable releases with .NET, Terraform, and CI/CD.', items: ['Python', '.NET', 'C#', 'ASP.NET Core', 'Blazor', 'REST APIs', 'Terraform', 'CI/CD'] },
 ];
 
 export const principles = [

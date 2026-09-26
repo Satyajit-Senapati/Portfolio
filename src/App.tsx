@@ -66,6 +66,7 @@ function Header({ theme, setTheme }: { theme: ThemePreference; setTheme: (theme:
   }, [menuOpen]);
 
   const nextTheme = () => setTheme(theme === 'system' ? 'dark' : theme === 'dark' ? 'light' : 'system');
+  const themeLabel = theme === 'system' ? 'System' : theme === 'dark' ? 'Dark' : 'Light';
 
   return <header className={`site-header${scrolled ? ' is-scrolled' : ''}`} id="top" ref={headerRef}>
     <div className="shell header-inner">
@@ -75,7 +76,7 @@ function Header({ theme, setTheme }: { theme: ThemePreference; setTheme: (theme:
         <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Contact <ArrowIcon /></a>
       </nav>
       <div className="header-actions">
-        <button className="theme-toggle" type="button" onClick={nextTheme} aria-label={`Theme: ${theme}. Change theme`} title={`Theme: ${theme}. Click to switch`}><span className="theme-glyph" aria-hidden="true">◐</span><span>{theme}</span></button>
+        <button className="theme-toggle" type="button" onClick={nextTheme} aria-label={`Theme: ${themeLabel}. Change theme`} title={`Theme: ${themeLabel}. Click to switch`}><svg className="theme-glyph" aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" /><path d="M12 4a8 8 0 0 0 0 16Z" fill="currentColor" /></svg><span>{themeLabel}</span></button>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="site-nav" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} onClick={() => setMenuOpen(!menuOpen)}><span></span><span></span></button>
       </div>
     </div>
@@ -87,9 +88,9 @@ function SystemVisual() {
     <div className="panel-topline"><span>SYSTEM VIEW / 01</span><span className="panel-cross" aria-hidden="true">✳</span></div>
     <p className="panel-title">From Data to Decisions</p>
     <div className="flow">
-      <div className="flow-stage"><span className="flow-index">01 / INGEST</span><div className="flow-icon" aria-hidden="true"><i></i><i></i><i></i></div><strong>Enterprise<br />sources</strong><small>APIs · data · files</small></div>
+      <div className="flow-stage"><span className="flow-index">01 / INGEST</span><div className="flow-icon" aria-hidden="true"><i></i><i></i><i></i></div><strong>Enterprise<br />Sources</strong><small>APIs · Data · Files</small></div>
       <div className="flow-connector" aria-hidden="true"><span></span></div>
-      <div className="flow-stage flow-stage-featured"><span className="flow-index">02 / ENGINEER</span><div className="flow-core" aria-hidden="true"><span></span></div><strong>Cloud data<br />platform</strong><small>Azure · Spark · Delta</small></div>
+      <div className="flow-stage flow-stage-featured"><span className="flow-index">02 / ENGINEER</span><div className="flow-core" aria-hidden="true"><span></span></div><strong>Cloud Data<br />Platform</strong><small>Azure · Spark · Delta</small></div>
       <div className="flow-connector" aria-hidden="true"><span></span></div>
       <div className="flow-stage"><span className="flow-index">03 / ACTIVATE</span><div className="flow-spark" aria-hidden="true">✳</div><strong>Analytics<br />& AI</strong><small>Search · RAG · BI</small></div>
     </div>
@@ -122,7 +123,7 @@ function About() {
 function Expertise() {
   return <section className="section expertise-section" id="expertise" aria-labelledby="expertise-title"><div className="shell">
     <SectionHeading id="expertise-title" number="02" label="ENGINEERING EXPERTISE" title="Depth Across" accent="the Stack." description="The technologies I use to design, build, and run complete data and AI systems." />
-    <div className="expertise-grid">{expertise.map((group) => <div className="expertise-item reveal" key={group.title}><span className="expertise-number">{group.number}</span><h3>{group.title}</h3><p>{group.items.join(' · ')}</p></div>)}</div>
+    <div className="expertise-grid">{expertise.map((group) => <div className="expertise-item reveal" key={group.title}><span className="expertise-number">{group.number}</span><h3>{group.title}</h3><p className="expertise-summary">{group.summary}</p><p className="expertise-technologies">{group.items.join(' · ')}</p></div>)}</div>
   </div></section>;
 }
 
