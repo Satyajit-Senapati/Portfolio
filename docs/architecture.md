@@ -6,11 +6,11 @@ The site tells a short engineering story: positioning, capabilities, career cont
 
 ## Components and content
 
-`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data. A project can gain `repository` and `demo` URLs after they are confirmed; the UI currently shows a clear pending-link note. The resume is stored in `public/` and served for viewing and download.
+`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data, including the InterviewOS and NEVRI live app links and the Orqalis and PracticeLab repository links. The resume is stored in `public/` and served for viewing and download.
 
 ## Visual system
 
-The interface uses graphite/navy surfaces, cool silver text, and restrained teal to emphasize interactions and the data-flow motif. Typography, fine rules, generous spacing, and one architectural hero diagram provide the identity. Both themes use dedicated color tokens. CSS breakpoints reshape the page at tablet and mobile widths; the architecture flow becomes a vertical sequence on small screens.
+The interface uses graphite/navy surfaces, cool silver text, and restrained teal to emphasize interactions and the data-flow motif. Typography, fine rules, technical grids, ambient color fields, and one architectural hero diagram provide the identity. Both themes use dedicated color tokens for the background treatments and content. CSS breakpoints reshape the page at tablet and mobile widths; the architecture flow becomes a vertical sequence on small screens.
 
 ## Motion and accessibility
 

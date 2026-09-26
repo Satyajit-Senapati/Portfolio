@@ -29,7 +29,7 @@ export type ArchitecturePattern = {
 export const profile = {
   name: 'Satyajit Senapati',
   role: 'Lead Data & AI Engineer',
-  email: 'senapatisatyajit143@gmail.com',
+  email: 'satyajit.senapati.pro@gmail.com',
   location: 'India',
   resume: './Satyajit-Senapati-Resume.pdf',
   github: 'https://github.com/Satyajit-Senapati',
@@ -92,9 +92,8 @@ export const experience: Experience[] = [
   },
 ];
 
-// These product descriptions come from the supplied portfolio brief. External links
-// stay absent until the owner confirms the repositories and demos.
-export const projects: Project[] = [
+// Public demos were supplied by the owner; repository links are shown only for public projects.
+export const liveProjects = [
   {
     name: 'InterviewOS',
     kind: 'LEARNING SYSTEM',
@@ -102,6 +101,7 @@ export const projects: Project[] = [
     description: 'Brings structured study guides, question banks, and progress tracking together for data, cloud, AI, and coding topics.',
     details: ['Structured study guides and question banks', 'Browser-local notes, bookmarks, and progress', 'Offline-ready core learning experience'],
     technologies: ['React', 'TypeScript', 'IndexedDB'],
+    demo: 'https://interviewos.sattyzone.workers.dev/',
   },
   {
     name: 'NEVRI',
@@ -110,7 +110,11 @@ export const projects: Project[] = [
     description: 'A cross-platform application with Firebase integration and platform-focused design.',
     details: ['Web and Android experiences', 'Firebase integration', 'Platform-focused design'],
     technologies: ['Firebase', 'Web', 'Android'],
+    demo: 'https://nevri-notes.web.app/',
   },
+] satisfies (Project & { demo: string })[];
+
+export const localProjects = [
   {
     name: 'Orqalis',
     kind: 'ENGINEERING TOOLS',
@@ -120,7 +124,16 @@ export const projects: Project[] = [
     technologies: ['Multi-agent systems', 'MCP', 'Developer tooling'],
     repository: 'https://github.com/Satyajit-Senapati/Orqalis',
   },
-];
+  {
+    name: 'PracticeLab',
+    kind: 'LOCAL PRACTICE WORKSPACE',
+    positioning: 'A local workspace for hands-on Python practice.',
+    description: 'Turns a repository of Python problems into a searchable practice app with an in-browser runner and saved progress.',
+    details: ['Searchable problem catalog with prompts and reference solutions', 'Solution, test, and input editors with a browser-based Python runner', 'Local drafts, progress tracking, and an Add Problem workflow'],
+    technologies: ['Python', 'Pyodide', 'Node.js', 'Browser Workers'],
+    repository: 'https://github.com/Satyajit-Senapati/PracticeLab',
+  },
+] satisfies (Project & { repository: string })[];
 
 export const architecturePatterns: ArchitecturePattern[] = [
   {
@@ -172,17 +185,4 @@ export const principles = [
   { title: 'Design for Real Use', description: 'Start with the decision or workflow the system must improve, then shape the architecture around it.' },
   { title: 'Make the Platform Repeatable', description: 'Reusable frameworks, configuration, and automation reduce friction as data sources and teams grow.' },
   { title: 'Build Security into the System', description: 'Network boundaries, secrets, and deployment controls belong in the architecture from the start.' },
-];
-
-export const githubHighlights = [
-  {
-    name: 'PracticeLab',
-    description: 'A local Python practice workspace with a browser-based runner and structured problems.',
-    url: 'https://github.com/Satyajit-Senapati/PracticeLab',
-  },
-  {
-    name: 'Applied AI Notes',
-    description: 'Course notes and learning material from applied AI study.',
-    url: 'https://github.com/Satyajit-Senapati/Applied-AI',
-  },
 ];

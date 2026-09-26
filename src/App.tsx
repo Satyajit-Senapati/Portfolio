@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { architecturePatterns, experience, expertise, githubHighlights, principles, profile, projects } from './content/portfolio';
+import { architecturePatterns, experience, expertise, liveProjects, localProjects, principles, profile } from './content/portfolio';
 
 type ThemePreference = 'dark' | 'light' | 'system';
 
@@ -9,6 +9,12 @@ function ArrowIcon({ direction = 'up' }: { direction?: 'up' | 'down' }) {
   ) : (
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 19 19 5M8 5h11v11" /></svg>
   );
+}
+
+function ThemeIcon({ theme }: { theme: ThemePreference }) {
+  if (theme === 'light') return <svg className="theme-glyph" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>;
+  if (theme === 'dark') return <svg className="theme-glyph" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z" /></svg>;
+  return <svg className="theme-glyph" aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" /><path d="M12 4a8 8 0 0 0 0 16Z" fill="currentColor" /></svg>;
 }
 
 function SectionHeading({ id, number, label, title, accent, description }: { id: string; number: string; label: string; title: string; accent: string; description?: string }) {
@@ -76,7 +82,7 @@ function Header({ theme, setTheme }: { theme: ThemePreference; setTheme: (theme:
         <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Contact <ArrowIcon /></a>
       </nav>
       <div className="header-actions">
-        <button className="theme-toggle" type="button" onClick={nextTheme} aria-label={`Theme: ${themeLabel}. Change theme`} title={`Theme: ${themeLabel}. Click to switch`}><svg className="theme-glyph" aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" /><path d="M12 4a8 8 0 0 0 0 16Z" fill="currentColor" /></svg><span>{themeLabel}</span></button>
+        <button className="theme-toggle" type="button" onClick={nextTheme} aria-label={`Theme: ${themeLabel}. Change theme`} title={`Theme: ${themeLabel}. Click to switch`}><ThemeIcon theme={theme} /><span>{themeLabel}</span></button>
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="site-nav" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} onClick={() => setMenuOpen(!menuOpen)}><span></span><span></span></button>
       </div>
     </div>
@@ -157,12 +163,18 @@ function ArchitectureLab() {
 
 function Projects() {
   return <section className="section projects-section" id="projects" aria-labelledby="projects-title"><div className="shell">
-    <SectionHeading id="projects-title" number="05" label="PRODUCT EXPLORATIONS" title="Ideas Built as" accent="Systems." description="Product work that extends my engineering practice into learning, productivity, and developer tooling." />
-    <div className="projects-grid">{projects.map((project, index) => <article className={`project-card project-${index + 1} reveal`} key={project.name}>
-      <div className="project-preview"><div className="preview-top"><span>{project.kind}</span><span>0{index + 1} / 03</span></div><div className="preview-mark" aria-hidden="true">{project.name.slice(0, 2).toUpperCase()}</div><div className="preview-name">{project.name}</div><div className="preview-lines" aria-hidden="true"><i></i><i></i><i></i></div></div>
-      <div className="project-copy"><p className="project-type">{project.kind}</p><h3>{project.name}</h3><strong>{project.positioning}</strong><p>{project.description}</p><details className="project-details"><summary>Explore Product Scope <span aria-hidden="true">+</span></summary><ul>{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>{project.technologies.length > 0 && <div className="project-tech">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>}{!project.repository && <p className="project-link-status">Repository and demo links pending confirmation.</p>}</details>{project.repository && <a className="project-repository" href={project.repository} target="_blank" rel="noopener noreferrer">View Repository <ArrowIcon /></a>}</div>
+    <SectionHeading id="projects-title" number="05" label="PRODUCT EXPLORATIONS" title="Ideas Built as" accent="Systems." description="Live applications for learning and productivity, alongside local engineering tools with public source." />
+    <div className="projects-grid">{liveProjects.map((project, index) => <article className={`project-card project-${index + 1} reveal`} key={project.name}>
+      <div className="project-preview"><div className="preview-top"><span>{project.kind}</span><span>0{index + 1} / 02</span></div><div className="preview-mark" aria-hidden="true">{project.name.slice(0, 2).toUpperCase()}</div><h3 className="preview-name">{project.name}</h3><div className="preview-lines" aria-hidden="true"><i></i><i></i><i></i></div></div>
+      <div className="project-copy"><p className="project-type">LIVE APPLICATION</p><strong>{project.positioning}</strong><p>{project.description}</p><details className="project-details"><summary>Explore Product Scope <span aria-hidden="true">+</span></summary><ul>{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul><div className="project-tech">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></details><div className="project-links"><a className="project-link" href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.name} live app`}>Open Live App <ArrowIcon /></a></div></div>
     </article>)}</div>
-    <div className="github-strip reveal"><div><p className="section-kicker">MORE ON GITHUB</p><h3>Published Work & Notes</h3><a href={profile.github} target="_blank" rel="noopener noreferrer">Explore All Repositories <ArrowIcon /></a></div><div className="github-list">{githubHighlights.map((item) => <a key={item.name} href={item.url} target="_blank" rel="noopener noreferrer"><span><strong>{item.name}</strong><small>{item.description}</small></span><ArrowIcon /></a>)}</div></div>
+    <div className="local-projects reveal"><div className="local-projects-heading"><div><p className="section-kicker">LOCAL ENGINEERING PROJECTS</p><h3>Built to Run Locally.</h3></div><p>Open-source tools I use to explore engineering workflows and hands-on practice.</p></div>
+      <div className="local-projects-grid">{localProjects.map((project, index) => <article className="local-project-card" key={project.name}>
+        <span className="local-project-index">0{index + 1} / 02 <span aria-hidden="true">·</span> {project.kind}</span><h4>{project.name}</h4><strong>{project.positioning}</strong><p>{project.description}</p>
+        <ul>{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul><div className="project-tech">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div>
+        <a className="project-link" href={project.repository} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} repository`}>View Repository <ArrowIcon /></a>
+      </article>)}</div>
+    </div>
   </div></section>;
 }
 

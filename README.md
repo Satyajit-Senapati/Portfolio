@@ -28,7 +28,7 @@
 
 ## Overview
 
-This site presents Satyajit's work through a concise engineering narrative. It combines resume-verified experience with interactive reference architecture patterns and product explorations from the supplied portfolio brief. The design uses a restrained graphite and teal visual system, responsive editorial layouts, and purposeful motion.
+This site presents Satyajit's work through a concise engineering narrative. It combines resume-verified experience with interactive reference architecture patterns and product explorations from the supplied portfolio brief. The design uses a restrained graphite and teal visual system, technical grid and ambient backgrounds in both themes, responsive editorial layouts, and purposeful motion.
 
 | Area | What it shows |
 | --- | --- |
@@ -36,8 +36,8 @@ This site presents Satyajit's work through a concise engineering narrative. It c
 | **Expertise** | Domain-based skills across data engineering, Azure, AI/search, and software delivery |
 | **Experience** | A compact career timeline with expandable contributions and technologies |
 | **Architecture Lab** | Selectable cloud data platform, RAG, and production delivery patterns |
-| **Projects** | InterviewOS, NEVRI, and [Orqalis](https://github.com/Satyajit-Senapati/Orqalis) |
-| **GitHub & Knowledge** | Curated links to [PracticeLab](https://github.com/Satyajit-Senapati/PracticeLab) and [Applied AI Notes](https://github.com/Satyajit-Senapati/Applied-AI) |
+| **Live Applications** | [InterviewOS](https://interviewos.sattyzone.workers.dev/) and [NEVRI](https://nevri-notes.web.app/) with links to their websites |
+| **Local Engineering Projects** | [Orqalis](https://github.com/Satyajit-Senapati/Orqalis) and [PracticeLab](https://github.com/Satyajit-Senapati/PracticeLab) with links to their repositories |
 | **Contact** | Email, [GitHub](https://github.com/Satyajit-Senapati), and [LinkedIn](https://www.linkedin.com/in/satyajit-senapati-007/) |
 
 The site is static at runtime. It needs no backend, API key, analytics service, or live GitHub API request.
@@ -113,7 +113,7 @@ Vite uses a relative asset base, so the build works at a project Pages path or a
 | Downloadable resume | `public/Satyajit-Senapati-Resume.pdf` |
 | Social preview artwork | `public/og.png` |
 
-The resume lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information, so review it before deploying. InterviewOS and NEVRI repository/demo links are intentionally pending confirmation; Orqalis links to its verified public repository.
+The resume lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information. InterviewOS and NEVRI link to their live apps; Orqalis and PracticeLab link to their public repositories.
 
 ## Project Structure
 
