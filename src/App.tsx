@@ -104,8 +104,8 @@ function Hero() {
       <h1 id="hero-title">Engineering Intelligent Systems <em>from Data to AI.</em></h1>
       <p className="hero-intro">I design scalable Azure data platforms, intelligent search, and AI-powered applications — connecting architecture with production engineering.</p>
       <div className="hero-actions"><a className="button button-primary" href="#projects">Explore Projects <ArrowIcon /></a><a className="button button-secondary" href="#architecture">Explore Architecture <ArrowIcon /></a></div>
-      <div className="hero-secondary"><a href={profile.resume} download>Download Résumé <ArrowIcon direction="down" /></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowIcon /></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowIcon /></a><span className="hero-location">Based in India</span></div>
-      <div className="hero-facts" aria-label="Career highlights"><div><strong>8<span>+</span></strong><span>Years in data engineering</span></div><div><strong>2<span>+</span></strong><span>Years in enterprise AI</span></div><div><strong>4</strong><span>Industries served</span></div></div>
+      <div className="hero-secondary"><a href={profile.resume} download>Download Resume <ArrowIcon direction="down" /></a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowIcon /></a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowIcon /></a><span className="hero-location">Based in India</span></div>
+      <div className="hero-facts" aria-label="Career highlights"><div><strong>8<span>+</span></strong><span>Years in Data Engineering</span></div><div><strong>2<span>+</span></strong><span>Years in Enterprise AI</span></div><div><strong>4</strong><span>Industries Served</span></div></div>
     </div>
     <SystemVisual />
     <div className="hero-bottom" aria-hidden="true"><span>SCROLL TO EXPLORE</span><span>↓</span></div>
@@ -128,7 +128,7 @@ function Expertise() {
 
 function Experience() {
   return <section className="section experience-section" id="experience" aria-labelledby="experience-title"><div className="shell experience-layout">
-    <div className="experience-intro reveal"><p className="section-kicker">03 / EXPERIENCE</p><h2 id="experience-title">A Career Built Across the <em>Data Stack.</em></h2><p>From databases and big data to leading Azure data and AI delivery across healthcare, wildlife, commerce, and telecom.</p><a className="text-link" href={profile.resume} target="_blank" rel="noopener noreferrer">View Full Résumé <ArrowIcon /></a></div>
+    <div className="experience-intro reveal"><p className="section-kicker">03 / EXPERIENCE</p><h2 id="experience-title">A Career Built Across the <em>Data Stack.</em></h2><p>From databases and big data to leading Azure data and AI delivery across healthcare, wildlife, commerce, and telecom.</p><a className="text-link" href={profile.resume} target="_blank" rel="noopener noreferrer">View Full Resume <ArrowIcon /></a></div>
     <div className="timeline">{experience.map((item) => <details className="timeline-item reveal" key={item.organization}>
       <summary><span className="timeline-date">{item.period}</span><span className="timeline-heading"><strong>{item.role}</strong><span className="timeline-org">{item.organization} <b>·</b> {item.client}</span><span className="timeline-summary">{item.summary}</span></span><span className="timeline-expand" aria-hidden="true">+</span></summary>
       <div className="timeline-details"><p className="detail-label">SELECTED CONTRIBUTIONS</p><ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul><div className="timeline-tech">{item.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></div>
@@ -194,7 +194,7 @@ function App() {
     return () => { observer.disconnect(); document.documentElement.classList.remove('motion-ready'); };
   }, []);
 
-  return <><a className="skip-link" href="#main">Skip to content</a><Header theme={preference} setTheme={setPreference} /><main id="main"><Hero /><About /><Expertise /><Experience /><ArchitectureLab /><Projects /><Principles /><Contact /></main><footer className="site-footer"><div className="shell footer-inner"><span>© {new Date().getFullYear()} {profile.name}</span><span>{profile.role}</span><div><a href={profile.resume} download>Résumé</a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a><a href={`mailto:${profile.email}`}>Email</a><a href="#top">Back to Top ↑</a></div></div></footer></>;
+  return <><a className="skip-link" href="#main">Skip to content</a><Header theme={preference} setTheme={setPreference} /><main id="main"><Hero /><About /><Expertise /><Experience /><ArchitectureLab /><Projects /><Principles /><Contact /></main><footer className="site-footer"><div className="shell footer-inner"><span>© {new Date().getFullYear()} {profile.name}</span><span>{profile.role}</span><div><a href={profile.resume} download>Resume</a><a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a><a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a><a href={`mailto:${profile.email}`}>Email</a><a href="#top">Back to Top ↑</a></div></div></footer></>;
 }
 
 export default App;

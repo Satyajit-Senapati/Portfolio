@@ -2,11 +2,11 @@
 
 ## Experience
 
-The site tells a short engineering story: positioning, capabilities, career context, reference architectures, product explorations, engineering principles, and contact. The architecture lab provides technical depth without presenting a client-specific diagram as public documentation. Its patterns are based on technologies and workflows named in the résumé.
+The site tells a short engineering story: positioning, capabilities, career context, reference architectures, product explorations, engineering principles, and contact. The architecture lab provides technical depth without presenting a client-specific diagram as public documentation. Its patterns are based on technologies and workflows named in the resume.
 
 ## Components and content
 
-`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data. A project can gain `repository` and `demo` URLs after they are confirmed; the UI currently shows a clear pending-link note. The résumé is stored in `public/` and served for viewing and download.
+`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data. A project can gain `repository` and `demo` URLs after they are confirmed; the UI currently shows a clear pending-link note. The resume is stored in `public/` and served for viewing and download.
 
 ## Visual system
 

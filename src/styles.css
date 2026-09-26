@@ -37,7 +37,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-nav { display: flex; align-items: center; gap: clamp(1.35rem, 3vw, 3rem); }
 .site-nav a { color: #c8d7dc; font-size: .91rem; font-weight: 600; transition: color .2s ease; }
 .site-nav a:hover { color: var(--accent); }
-.site-nav .nav-contact { color: var(--accent); border-bottom: 1px solid rgba(101, 233, 215, .55); padding-bottom: .25rem; }
+.site-nav .nav-contact { position: relative; color: var(--accent); }
+.site-nav .nav-contact::after { content: ""; position: absolute; right: 0; bottom: -.25rem; left: 0; height: 1px; background: currentColor; opacity: .55; }
 .nav-contact span { padding-left: .4rem; }
 .menu-toggle { display: none; }
 

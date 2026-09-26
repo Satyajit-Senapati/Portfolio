@@ -28,7 +28,7 @@
 
 ## Overview
 
-This site presents Satyajit's work through a concise engineering narrative. It combines résumé-verified experience with interactive reference architecture patterns and product explorations from the supplied portfolio brief. The design uses a restrained graphite and teal visual system, responsive editorial layouts, and purposeful motion.
+This site presents Satyajit's work through a concise engineering narrative. It combines resume-verified experience with interactive reference architecture patterns and product explorations from the supplied portfolio brief. The design uses a restrained graphite and teal visual system, responsive editorial layouts, and purposeful motion.
 
 | Area | What it shows |
 | --- | --- |
@@ -110,10 +110,10 @@ Vite uses a relative asset base, so the build works at a project Pages path or a
 | Section structure and interactions | `src/App.tsx` |
 | Themes, layout, and responsive rules | `src/styles.css` |
 | Browser metadata and structured data | `index.html` |
-| Downloadable résumé | `public/Satyajit-Senapati-Resume.pdf` |
+| Downloadable resume | `public/Satyajit-Senapati-Resume.pdf` |
 | Social preview artwork | `public/og.png` |
 
-The résumé lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information, so review it before deploying. InterviewOS and NEVRI repository/demo links are intentionally pending confirmation; Orqalis links to its verified public repository.
+The resume lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information, so review it before deploying. InterviewOS and NEVRI repository/demo links are intentionally pending confirmation; Orqalis links to its verified public repository.
 
 ## Project Structure
 
