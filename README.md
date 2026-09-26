@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/favicon.svg" width="88" height="88" alt="Satyajit Senapati SS monogram">
+  <img src="./public/favicon.svg" width="88" height="88" alt="Satyajit Senapati monogram">
 </p>
 
 <h1 align="center">Satyajit Senapati</h1>
@@ -123,7 +123,7 @@ src/
   content/portfolio.ts     typed portfolio content
   styles.css               design tokens, themes, and responsive layout
 public/
-  favicon.svg              SS monogram
+  favicon.svg              site monogram and header logo
   og.png                   social preview card
   Satyajit-Senapati-Resume.pdf
 scripts/prepare-pages.mjs  deployment metadata generation

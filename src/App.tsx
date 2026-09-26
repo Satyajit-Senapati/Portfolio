@@ -69,7 +69,7 @@ function Header({ theme, setTheme }: { theme: ThemePreference; setTheme: (theme:
 
   return <header className={`site-header${scrolled ? ' is-scrolled' : ''}`} id="top" ref={headerRef}>
     <div className="shell header-inner">
-      <a className="brand" href="#top" aria-label="SS. Satyajit Senapati, Back to Top" onClick={() => setMenuOpen(false)}><span className="brand-mark" aria-hidden="true">SS<span>.</span></span><span className="brand-name">Satyajit Senapati</span></a>
+      <a className="brand" href="#top" aria-label="Satyajit Senapati, Back to Top" onClick={() => setMenuOpen(false)}><img className="brand-mark" src="./favicon.svg" alt="" aria-hidden="true" /><span className="brand-name">Satyajit Senapati</span></a>
       <nav className={`site-nav${menuOpen ? ' is-open' : ''}`} id="site-nav" aria-label="Main navigation">
         {[['About', '#about'], ['Expertise', '#expertise'], ['Experience', '#experience'], ['Architecture', '#architecture'], ['Projects', '#projects']].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
         <a className="nav-contact" href="#contact" onClick={() => setMenuOpen(false)}>Contact <ArrowIcon /></a>
