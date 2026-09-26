@@ -56,7 +56,7 @@ npm.cmd ci
 npm.cmd run dev
 ```
 
-Open the local URL printed by Vite. On macOS or Linux, use `npm` in place of `npm.cmd`.
+Open [http://localhost:4000/](http://localhost:4000/). On macOS or Linux, use `npm` in place of `npm.cmd`.
 
 ## Validation
 
@@ -113,7 +113,7 @@ Vite uses a relative asset base, so the build works at a project Pages path or a
 | Downloadable résumé | `public/Satyajit-Senapati-Resume.pdf` |
 | Social preview artwork | `public/og.png` |
 
-The supplied `Data_Engineer_v4.pdf` remains local and is ignored by Git; the site serves the copy under `public/`. That public copy includes contact information, so review it before deploying. InterviewOS and NEVRI repository/demo links are intentionally pending confirmation; Orqalis links to its verified public repository.
+The résumé lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information, so review it before deploying. InterviewOS and NEVRI repository/demo links are intentionally pending confirmation; Orqalis links to its verified public repository.
 
 ## Project Structure
 

@@ -6,7 +6,7 @@ The site tells a short engineering story: positioning, capabilities, career cont
 
 ## Components and content
 
-`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data. A project can gain `repository` and `demo` URLs after they are confirmed; the UI currently shows a clear pending-link note. The original résumé remains in the project root, and a copy in `public/` is served for viewing and download.
+`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data. A project can gain `repository` and `demo` URLs after they are confirmed; the UI currently shows a clear pending-link note. The résumé is stored in `public/` and served for viewing and download.
 
 ## Visual system
 
