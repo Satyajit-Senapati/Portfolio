@@ -65,6 +65,12 @@ The initial large PNG delivery was replaced with WebP copies: avatar approximate
 
 ## Release Gate
 
+### Page-wide Text Spacing Review
+
+Reviewed the header, hero, portrait card, live and local projects, about, expertise, career disclosures, architecture, principles, contact, and footer. Removed compressed tracking from small identity and descriptive text; softened display tracking and gave component headings more line height. Added gentle letter/word spacing to body copy and controls. The portrait name/subtitle now stay at 15/13px; supporting captions and feedback use a 12px minimum, and primary buttons retain 13px text on compact screens.
+
+Checked 320, 390, 600, 820, 1080, and 1440 px in both themes, including expanded product and career disclosures. Computed text bounds fit their containers, the local font loaded, and no horizontal overflow or runtime exceptions appeared. Inspected desktop/mobile captures section by section and adjusted mobile button wrapping to keep equal widths.
+
 ### Selected Logo Follow-up
 
 Applied the owner's choice **07 / Woven Initials** to the header, footer, browser icon, README, and vector downloads. Reconstructed the generated concept as four smooth SVG paths and versioned the favicon URL to refresh browser caches. Checked the identity at 16, 24, 32, 48, and 64 px; reviewed desktop and mobile captures in both themes. Header/footer images loaded, the favicon references resolve, and the checked pages have no horizontal overflow or browser exceptions. Refreshed the README preview. The existing validation command passed.

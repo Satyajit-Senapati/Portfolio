@@ -2,7 +2,7 @@
 
 Created with the built-in image generation tool. Final choice: **07 / Woven Initials**.
 
-Comparison: `public/brand/explorations/round-2.png`.
+The comparison sheet was removed from public assets after selection and remains available in Git history. Production assets are `public/brand/satyajit-mark.svg`, `public/brand/satyajit-mark-mono.svg`, and `public/favicon.svg`.
 
 ## 05 / Möbius S
 

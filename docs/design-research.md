@@ -18,7 +18,7 @@ These are visual research references, not affiliations or endorsements. The supp
 
 ## Woven Initials Logo
 
-The owner selected **07 / Woven Initials** from the second concept round. Interlocking S ribbons reference Satyajit and Senapati; their diagonal cuts form a compact architectural silhouette. The concept was generated with the built-in image generation tool, then reconstructed as four smooth vector paths for production. The earlier Folded S remains in the exploration archive.
+The owner selected **07 / Woven Initials** from the second concept round. Interlocking S ribbons reference Satyajit and Senapati; their diagonal cuts form a compact architectural silhouette. The concept was generated with the built-in image generation tool, then reconstructed as four smooth vector paths for production. Earlier logo explorations remain available in Git history.
 
 - Master: `public/brand/satyajit-mark.svg`
 - Monochrome: `public/brand/satyajit-mark-mono.svg`
@@ -28,7 +28,7 @@ The owner selected **07 / Woven Initials** from the second concept round. Interl
 - Use: scale uniformly; use lilac on ink, violet on light, or one contrasting monochrome color.
 - Keep the unmodified silhouette at small sizes. Do not add shadows or gradients to the mark.
 
-The selected identity proof is `public/brand/explorations/selected.html`; the generated concept sheet is `public/brand/explorations/round-2.png`. The full prompt set and refinement prompt are in [logo-round-2-prompts.md](logo-round-2-prompts.md).
+The temporary public comparison pages and concept assets were removed after selection. The production SVG files above are the source of truth. The full prompt set and refinement prompt are in [logo-round-2-prompts.md](logo-round-2-prompts.md).
 
 ## Avatar
 

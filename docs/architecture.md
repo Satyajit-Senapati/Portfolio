@@ -26,6 +26,8 @@ Manrope weight tokens distinguish body copy (450), supporting labels (500), cont
 
 Section eyebrows and hero statistics use 600. Portrait and project captions, the about caption, contact email, and copy feedback use 500. These weights remain consistent in both themes and at every breakpoint.
 
+Text spacing follows scale: large display headings use -0.035em, component headings use -0.015em, and body copy and controls use gentle positive spacing. Names, lead copy, job titles, and the email avoid compressed tracking. The portrait card keeps its name at 15px and subtitle at 13px across breakpoints; supporting captions and feedback use at least 12px. Primary buttons keep 13px text and wrap evenly when space is limited. Decorative section indices and browser-preview chrome retain smaller sizes.
+
 ## Motion and Accessibility Behavior
 
 Motion is limited to brief entry reveals and hover/focus feedback. There is no perpetual animation, typewriter, or custom cursor. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme preference persists locally and follows system changes when set to **System**. The menu closes on Escape, outside click, or navigation. Email copy reports success or a useful fallback without silently opening another app.
