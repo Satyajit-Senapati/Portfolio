@@ -26,6 +26,9 @@
   --ink: #211a31;
   --radius: 20px;
   color-scheme: dark;
+  --text-body: 15px;
+  --text-small: 13px;
+  --text-caption: 12px;
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -173,7 +176,7 @@ summary::marker {
 }
 .section-heading > p {
   max-width: 315px;
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.85;
   flex-shrink: 0;
   padding-bottom: 4px;
@@ -438,7 +441,7 @@ summary::marker {
   align-items: center;
   gap: 24px;
   margin-top: 26px;
-  font-size: 12px;
+  font-size: var(--text-small);
 }
 .hero-socials a {
   display: flex;
@@ -601,7 +604,7 @@ summary::marker {
   font-size: 23px;
 }
 .hero-facts > div > span {
-  font-size: 11px;
+  font-size: var(--text-caption);
   line-height: 1.5;
   color: var(--muted);
   max-width: 105px;
@@ -673,7 +676,7 @@ summary::marker {
   margin-bottom: 12px;
 }
 .project-copy > p:not(.section-kicker):not(.project-positioning) {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.8;
 }
 .project-tech {
@@ -683,7 +686,7 @@ summary::marker {
   margin-top: 20px;
 }
 .project-tech span {
-  font-size: 10px;
+  font-size: var(--text-caption);
   padding: 4px 8px;
   background: var(--surface-raised);
   color: var(--muted);
@@ -701,7 +704,7 @@ summary::marker {
   color: var(--text);
   border-bottom: 1px solid var(--line);
   padding: 8px 0;
-  font-size: 13px;
+  font-size: var(--text-small);
   font-weight: 700;
   transition:
     border-color 0.2s,
@@ -718,7 +721,7 @@ summary::marker {
 .project-details {
   width: 100%;
   margin-top: 22px;
-  font-size: 13px;
+  font-size: var(--text-small);
 }
 .project-details summary {
   display: flex;
@@ -743,7 +746,7 @@ summary::marker {
 .project-details ul {
   padding-left: 17px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-small);
   line-height: 1.8;
 }
 .project-details li + li {
@@ -848,7 +851,7 @@ summary::marker {
   color: var(--accent);
 }
 .local-projects-heading p {
-  font-size: 12px;
+  font-size: var(--text-caption);
 }
 .local-projects-grid {
   display: grid;
@@ -860,6 +863,9 @@ summary::marker {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(130deg, var(--surface), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .local-project-top {
   display: flex;
@@ -900,12 +906,13 @@ summary::marker {
   margin-bottom: 14px;
 }
 .local-project-card > p {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.85;
   max-width: 470px;
 }
 .local-project-card .text-link {
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 24px;
 }
 /* A human introduction, then a precise and compact capability map. */
 .about-section {
@@ -968,7 +975,7 @@ summary::marker {
   margin-bottom: 28px;
 }
 .about-main > p {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.95;
 }
 .about-main .about-lead {
@@ -987,7 +994,7 @@ summary::marker {
   gap: 14px;
 }
 .about-current p {
-  font-size: 11px;
+  font-size: var(--text-caption);
   line-height: 1.9;
 }
 .about-current strong {
@@ -1003,6 +1010,9 @@ summary::marker {
 .expertise-item {
   padding: 32px 26px 36px 0;
   position: relative;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
 }
 .expertise-item + .expertise-item {
   padding-left: 26px;
@@ -1031,13 +1041,11 @@ summary::marker {
   font-size: 20px;
   line-height: 1.25;
   letter-spacing: -0.035em;
-  min-height: 50px;
   margin-bottom: 16px;
 }
 .expertise-item > p {
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.9;
-  min-height: 114px;
 }
 .expertise-technologies {
   border-top: 1px solid var(--line);
@@ -1049,7 +1057,7 @@ summary::marker {
   gap: 6px 12px;
 }
 .expertise-technologies span {
-  font-size: 11px;
+  font-size: var(--text-caption);
   color: var(--muted);
   line-height: 1.8;
 }
@@ -1071,7 +1079,7 @@ summary::marker {
   font-size: clamp(36px, 3.5vw, 50px);
 }
 .experience-intro > p:not(.section-kicker) {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.9;
   max-width: 315px;
   margin: 24px 0;
@@ -1124,7 +1132,7 @@ summary::marker {
   font-family: Consolas, monospace;
 }
 .timeline-date {
-  font-size: 10px;
+  font-size: var(--text-caption);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent);
@@ -1140,7 +1148,7 @@ summary::marker {
   letter-spacing: -0.025em;
 }
 .timeline-org {
-  font-size: 12px;
+  font-size: var(--text-small);
   color: var(--muted);
   display: block;
   margin-top: 7px;
@@ -1170,7 +1178,7 @@ summary::marker {
 }
 .timeline-details {
   padding: 0 30px 28px 48px;
-  font-size: 13px;
+  font-size: var(--text-body);
   color: var(--muted);
 }
 .timeline-details > p {
@@ -1252,7 +1260,7 @@ summary::marker {
   margin-bottom: 12px;
 }
 .architecture-content > p {
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.8;
 }
 .architecture-flow {
@@ -1333,7 +1341,7 @@ summary::marker {
   display: block;
 }
 .architecture-detail p {
-  font-size: 13px;
+  font-size: var(--text-body);
   margin-top: 5px;
   line-height: 1.85;
 }
@@ -1375,7 +1383,7 @@ summary::marker {
   letter-spacing: -0.035em;
 }
 .principle p {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.85;
 }
 /* Contact is a final, warm invitation. */
@@ -1418,7 +1426,7 @@ summary::marker {
   letter-spacing: -0.055em;
 }
 .contact-main p {
-  font-size: 14px;
+  font-size: var(--text-body);
   margin-top: 25px;
   line-height: 1.9;
 }
@@ -1459,7 +1467,7 @@ summary::marker {
   gap: 16px;
 }
 .contact-email > a {
-  font-size: 15px;
+  font-size: var(--text-body);
   letter-spacing: -0.025em;
 }
 .contact-email > a:hover {
@@ -1493,7 +1501,7 @@ summary::marker {
 .contact-socials {
   display: flex;
   gap: 25px;
-  font-size: 12px;
+  font-size: var(--text-small);
 }
 .contact-socials a {
   display: flex;
@@ -1515,7 +1523,7 @@ summary::marker {
   justify-content: space-between;
   align-items: center;
   gap: 25px;
-  font-size: 11px;
+  font-size: var(--text-small);
   color: var(--muted);
 }
 .footer-brand {
@@ -1633,7 +1641,6 @@ summary::marker {
     padding-left: 20px;
   }
   .expertise-item > p {
-    min-height: 137px;
   }
   .expertise-item h3 {
     font-size: 18px;
@@ -1774,7 +1781,7 @@ summary::marker {
     font-size: 26px;
   }
   .hero-facts > div > span {
-    font-size: 10px;
+    font-size: var(--text-caption);
     max-width: 85px;
   }
   .scroll-link {
@@ -1790,7 +1797,7 @@ summary::marker {
     font-size: 42px;
   }
   .section-heading > p {
-    font-size: 13px;
+    font-size: var(--text-body);
     max-width: 250px;
     padding-top: 40px;
   }
@@ -1808,7 +1815,7 @@ summary::marker {
     padding: 28px;
   }
   .project-copy > p:not(.section-kicker):not(.project-positioning) {
-    font-size: 13px;
+    font-size: var(--text-body);
   }
   .featured-project {
     grid-template-columns: 1fr 1fr;
@@ -1835,7 +1842,7 @@ summary::marker {
     font-size: 16px;
   }
   .about-main > p {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1855,18 +1862,15 @@ summary::marker {
     border-top: 1px solid var(--line);
   }
   .expertise-item h3 {
-    min-height: 0;
     font-size: 22px;
   }
   .expertise-item > p {
-    min-height: 0;
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .expertise-top {
     margin-bottom: 24px;
   }
   .expertise-technologies {
-    min-height: 60px;
   }
   .experience-section {
     padding-top: 0;
@@ -1890,7 +1894,7 @@ summary::marker {
     padding-right: 10px;
   }
   .timeline-org {
-    font-size: 11px;
+    font-size: var(--text-small);
   }
   .architecture-tabs {
     padding: 0 24px;
@@ -1936,7 +1940,7 @@ summary::marker {
     margin-right: 0;
   }
   .contact-email > a {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .footer-inner > span {
     font-size: 10px;
@@ -2018,7 +2022,7 @@ summary::marker {
   }
   .hero-socials {
     margin-top: 22px;
-    font-size: 12px;
+    font-size: var(--text-small);
     gap: 23px;
   }
   .hero-socials > span {
@@ -2104,7 +2108,7 @@ summary::marker {
   }
   .hero-facts > div > span {
     display: block;
-    font-size: 10px;
+    font-size: var(--text-caption);
     max-width: 100px;
     line-height: 1.65;
   }
@@ -2121,7 +2125,7 @@ summary::marker {
   }
   .section-heading > p {
     padding-top: 19px;
-    font-size: 13px;
+    font-size: var(--text-body);
     max-width: 430px;
     line-height: 1.85;
   }
@@ -2188,10 +2192,10 @@ summary::marker {
     max-width: 420px;
   }
   .project-copy > p:not(.section-kicker):not(.project-positioning) {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .project-tech span {
-    font-size: 10px;
+    font-size: var(--text-caption);
   }
   .project-copy .text-link {
     margin-top: 17px;
@@ -2208,7 +2212,7 @@ summary::marker {
     margin-bottom: 10px;
   }
   .local-projects-heading p {
-    font-size: 11px;
+    font-size: var(--text-caption);
   }
   .local-projects-grid {
     grid-template-columns: 1fr;
@@ -2224,7 +2228,8 @@ summary::marker {
     font-size: 25px;
   }
   .local-project-card .text-link {
-    margin-top: 15px;
+    margin-top: auto;
+    padding-top: 24px;
   }
   .about-layout {
     grid-template-columns: 1fr;
@@ -2268,7 +2273,7 @@ summary::marker {
     font-size: 17px;
   }
   .about-main > p {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .about-current {
     margin-top: 25px;
@@ -2295,12 +2300,10 @@ summary::marker {
   }
   .expertise-item h3 {
     font-size: 18px;
-    min-height: 45px;
   }
   .expertise-item > p {
-    font-size: 12px;
+    font-size: var(--text-body);
     line-height: 1.85;
-    min-height: 122px;
   }
   .expertise-technologies {
     margin-top: 20px;
@@ -2308,7 +2311,7 @@ summary::marker {
     padding-top: 15px;
   }
   .expertise-technologies span {
-    font-size: 10px;
+    font-size: var(--text-caption);
   }
   .experience-section {
     padding-top: 0;
@@ -2336,10 +2339,10 @@ summary::marker {
     font-size: 17px;
   }
   .timeline-date {
-    font-size: 10px;
+    font-size: var(--text-caption);
   }
   .timeline-org {
-    font-size: 11px;
+    font-size: var(--text-small);
     line-height: 1.8;
   }
   .timeline-details {
@@ -2347,7 +2350,7 @@ summary::marker {
   }
   .timeline-details > p,
   .timeline-details ul {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .architecture-tabs {
     display: grid;
@@ -2383,7 +2386,7 @@ summary::marker {
     font-size: 24px;
   }
   .architecture-content > p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .architecture-flow {
     grid-template-columns: 1fr;
@@ -2436,7 +2439,7 @@ summary::marker {
     line-height: 22px;
   }
   .architecture-detail p {
-    font-size: 12px;
+    font-size: var(--text-body);
     margin-top: 5px;
   }
   .principles-layout {
@@ -2461,7 +2464,7 @@ summary::marker {
     font-size: 11px;
   }
   .principle p {
-    font-size: 13px;
+    font-size: var(--text-body);
   }
   .contact-section {
     padding-top: 0;
@@ -2486,7 +2489,7 @@ summary::marker {
     font-size: 40px;
   }
   .contact-main p {
-    font-size: 12px;
+    font-size: var(--text-body);
     line-height: 1.9;
     margin-top: 20px;
   }
@@ -2511,7 +2514,7 @@ summary::marker {
     justify-content: space-between;
   }
   .contact-email > a {
-    font-size: clamp(10px, 2.9vw, 14px);
+    font-size: var(--text-body);
     white-space: nowrap;
   }
   .copy-button {
@@ -2524,7 +2527,7 @@ summary::marker {
   }
   .contact-socials {
     margin-top: 24px;
-    font-size: 11px;
+    font-size: var(--text-small);
   }
   .footer-inner {
     flex-wrap: wrap;
@@ -2546,7 +2549,7 @@ summary::marker {
     justify-content: space-between;
     padding-top: 18px;
     border-top: 1px solid var(--line);
-    font-size: 11px;
+    font-size: var(--text-small);
   }
   .site-footer {
     padding: 27px 0;
@@ -2614,7 +2617,6 @@ summary::marker {
   }
   .expertise-item h3,
   .expertise-item > p {
-    min-height: 0;
   }
   .contact-inner {
     padding-inline: 18px;
@@ -2627,7 +2629,7 @@ summary::marker {
     height: 40px;
   }
   .contact-email > a {
-    font-size: 11px;
+    font-size: var(--text-body);
   }
   .section-heading h2,
   .about-main h2 {
@@ -2697,21 +2699,18 @@ summary::marker {
   }
   .expertise-item h3 {
     font-size: 23px;
-    min-height: 0;
     margin-bottom: 12px;
   }
   .expertise-item > p {
-    font-size: 14px;
-    min-height: 0;
+    font-size: var(--text-body);
   }
   .expertise-top {
     margin-bottom: 22px;
   }
   .expertise-technologies {
-    min-height: 0;
   }
   .expertise-technologies span {
-    font-size: 12px;
+    font-size: var(--text-caption);
   }
   .hero-socials > span {
     display: none;
@@ -2733,7 +2732,121 @@ summary::marker {
     font-size: 10px;
   }
   .hero-facts > div > span {
-    font-size: 11px;
+    font-size: var(--text-caption);
+  }
+}
+/* Shared component sizes keep text and targets consistent at every breakpoint. */
+.expertise-technologies {
+  align-self: start;
+}
+.art-footnote {
+  z-index: 1;
+  max-width: calc(100% - 90px);
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+.datarevia-art .art-footnote {
+  background: #2c243cf2;
+  color: #e6dbf8;
+}
+.nevri-art .art-footnote {
+  background: #f5f0e5f5;
+  color: #534a3e;
+}
+.local-project-top {
+  width: 100%;
+}
+.local-project-card > .project-tech {
+  margin-bottom: 0;
+}
+.theme-toggle,
+.menu-toggle,
+.copy-button,
+.icon-link,
+.contact-round {
+  min-width: 44px;
+  min-height: 44px;
+}
+.copy-button,
+.icon-link {
+  width: 44px;
+  height: 44px;
+}
+.menu-toggle {
+  width: 44px;
+  height: 44px;
+}
+.menu-toggle span {
+  left: 13px;
+  top: 18px;
+}
+.menu-toggle span + span {
+  top: 25px;
+}
+.text-link,
+.project-details summary {
+  min-height: 44px;
+}
+.hero-socials a,
+.contact-socials a,
+.footer-inner > div a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.contact-email {
+  min-width: 0;
+}
+.contact-email > a {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.contact-socials {
+  flex-shrink: 0;
+}
+.copy-status {
+  white-space: normal;
+}
+.architecture-node strong {
+  font-size: var(--text-small);
+}
+@media (max-width: 1050px) and (min-width: 761px) {
+  .architecture-flow {
+    gap: 12px;
+  }
+  .architecture-node {
+    padding-inline: 10px;
+  }
+  .architecture-node:not(:last-child)::after {
+    right: -11px;
+  }
+  .contact-bottom {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 760px) {
+  .about-emblem span {
+    display: none;
+  }
+  .portrait-composition {
+    margin-top: 22px;
+  }
+  .hero-socials {
+    margin-top: 16px;
+  }
+  .contact-email {
+    gap: 10px;
+  }
+  .contact-email > a {
+    line-height: 1.6;
+  }
+  .architecture-detail {
+    grid-template-columns: 60px 1fr;
+  }
+  .architecture-detail strong,
+  .stage-label {
+    line-height: 24px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

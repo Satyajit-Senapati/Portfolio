@@ -889,8 +889,7 @@ function Contact() {
             </h2>
             <p>
               Data platforms, AI systems, or something worth building.
-              <br />
-              I’d love to hear what you have in mind.
+              <br /> I’d love to hear what you have in mind.
             </p>
           </div>
           <a
@@ -903,7 +902,10 @@ function Contact() {
         </div>
         <div className="contact-bottom">
           <div className="contact-email">
-            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+            <a href={`mailto:${profile.email}`}>
+              {profile.email.split("@")[0]}
+              <wbr />@{profile.email.split("@")[1]}
+            </a>
             <button
               className="copy-button"
               type="button"

@@ -19,7 +19,20 @@ Reviewed on 28 September 2026 against the local development and production build
 - No browser runtime errors in the reviewed states.
 - DataRevia and NEVRI public sites were opened and captured. Local tools retain their public repository links; private product repositories are not exposed.
 
-## Production Audit
+## Component Style and Readability Follow-up
+
+A second section-by-section review covered 320, 360, 600, 820, 1080, and 1440 px in both themes, including expanded project cards and longer architecture stage names.
+
+- Standardized descriptive text at 15 px, supporting text at 13 px, and technology/date labels at 12 px.
+- Replaced fixed expertise text heights with shared grid rows so headings, descriptions, and technology dividers align within each row.
+- Anchored repository actions to the bottom of equal-height cards, including when only one card is expanded.
+- Increased small icon controls to at least 44 × 44 px and gave disclosure/social actions consistent touch height.
+- Kept the contact email readable on small screens, with a natural break before the domain instead of shrinking it.
+- Corrected the missing word space when the contact paragraph’s desktop line break is hidden on mobile.
+- Removed the miniature decorative label from the mobile about illustration and added solid caption backplates over project previews.
+- Verified no horizontal overflow, loaded images, and no browser exceptions across the reviewed widths and themes.
+
+## Production Audit Results
 
 Lighthouse 12.8.2, default mobile simulation, local Vite production preview:
 
