@@ -575,8 +575,7 @@ function About() {
             Make Complexity <em>Feel Simple.</em>
           </h2>
           <p className="about-lead">
-            I’m a data and AI engineer who cares about the whole picture — the
-            platform underneath and the person using it.
+            I’m a Data and AI Engineer with the Whole Picture in Mind.
           </p>
           <p>
             My work connects ingestion and distributed processing with

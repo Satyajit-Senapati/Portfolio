@@ -18,9 +18,9 @@ Body, supporting, and caption text use shared 15px, 13px, and 12px tokens. Exper
 
 ## Capitalization and Text Weight
 
-Headings, navigation, buttons, and technology labels use Title Case. Articles, conjunctions, and prepositions stay lowercase within a title, as in “Intelligent Systems from Data to AI” and “Design for Real Use.” A visual line break does not start a new title. Short section eyebrows use uppercase as a consistent visual treatment.
+Headings, navigation, buttons, technology labels, and short prominent lead lines use Title Case. Articles, conjunctions, and short prepositions stay lowercase within a title, as in “Intelligent Systems from Data to AI,” “Design for Real Use,” and “I’m a Data and AI Engineer with the Whole Picture in Mind.” A visual line break does not start a new title. Short section eyebrows use uppercase as a consistent visual treatment.
 
-Descriptions, contribution bullets, and status feedback use sentence case. Generic terms such as fact tables, dimension models, and bronze layers are lowercase in prose. Preserve product names and technical spelling: DataRevia, NEVRI, Orqalis, PracticeLab, GitHub, LinkedIn, PySpark, OpenAI, scikit-learn, and .NET. Use “Resume” throughout.
+Supporting descriptions, contribution bullets, and status feedback use sentence case. Generic terms such as fact tables, dimension models, and bronze layers are lowercase in prose. Preserve product names and technical spelling: DataRevia, NEVRI, Orqalis, PracticeLab, GitHub, LinkedIn, PySpark, OpenAI, scikit-learn, and .NET. Use “Resume” throughout.
 
 Manrope weight tokens distinguish body copy (450), supporting labels (500), controls (600), headings (650), and primary actions (700). The hero accent inherits its heading weight; color supplies emphasis. Avoid browser-default bold or automatic CSS capitalization for content.
 

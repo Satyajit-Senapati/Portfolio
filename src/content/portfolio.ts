@@ -132,7 +132,7 @@ export const liveProjects = [
   {
     name: "NEVRI",
     kind: "PRODUCTIVITY APPLICATION",
-    positioning: "A quieter place for notes, ideas, and everyday writing.",
+    positioning: "A Quieter Place for Notes, Ideas, and Everyday Writing.",
     description:
       "A focused notes workspace with local guest vaults, organized writing, and optional Google Drive sync. Available on the web, with Android in testing.",
     details: [
@@ -147,7 +147,7 @@ export const liveProjects = [
   {
     name: "DataRevia",
     kind: "LEARNING SYSTEM",
-    positioning: "A local-first workspace for technical interview preparation.",
+    positioning: "A Local-First Workspace for Technical Interview Preparation.",
     description:
       "Brings structured study guides, question banks, and progress tracking together for data, cloud, AI, and coding topics.",
     details: [

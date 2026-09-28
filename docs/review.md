@@ -38,6 +38,8 @@ Reviewed all authored page headings, navigation, actions, captions, technology l
 
 Standardized font-weight tokens across the UI and strengthened body text, supporting labels, and disclosures. Checked the computed weights and text wrapping at 320, 390, 820, and 1440 px in both themes; no horizontal overflow or browser exceptions. The hero accent now has the same weight as the main headline. Capitalization and emphasis rules are documented in the architecture notes.
 
+The later page-wide capitalization review found three prominent lead lines in sentence case. The About lead was tightened into a short Title Case statement; the NEVRI and DataRevia positioning lines now follow the same style. Supporting descriptions, technical details, and feedback remain sentence case. The changed lines were visually checked at 390 and 1440 px with no horizontal overflow.
+
 ## Project Order and Typography Refinement
 
 NEVRI now appears before DataRevia. Preview styling, images, and captions follow project identity rather than array position; both website links were checked against their cards.
