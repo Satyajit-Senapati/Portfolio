@@ -10,7 +10,12 @@
   color: #f0eef3;
   background: #111115;
   font-synthesis: none;
-  font-weight: 400;
+  font-weight: var(--weight-body);
+  --weight-body: 450;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-heading: 650;
+  --weight-bold: 700;
   --bg: #111115;
   --surface: #19191f;
   --surface-raised: #212127;
@@ -110,7 +115,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 650;
+  font-weight: var(--weight-heading);
   line-height: 1.13;
   letter-spacing: -0.045em;
 }
@@ -157,7 +162,7 @@ summary::marker {
 .eyebrow {
   font-size: 12px;
   letter-spacing: 0.14em;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   line-height: 1.5;
   color: var(--muted);
 }
@@ -231,7 +236,7 @@ summary::marker {
   gap: 12px;
   white-space: nowrap;
   font-size: 14px;
-  font-weight: 750;
+  font-weight: var(--weight-bold);
   letter-spacing: -0.035em;
 }
 .brand-mark {
@@ -246,7 +251,7 @@ summary::marker {
 }
 .site-nav a {
   font-size: 13px;
-  font-weight: 650;
+  font-weight: var(--weight-semibold);
   color: var(--muted);
   line-height: 24px;
   padding-block: 10px;
@@ -365,7 +370,7 @@ summary::marker {
 .hero-hello {
   color: var(--text);
   font-size: 19px;
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   margin-bottom: 17px;
   letter-spacing: -0.03em;
 }
@@ -373,12 +378,12 @@ summary::marker {
   font-size: clamp(40px, 4.45vw, 66px);
   line-height: 1.13;
   letter-spacing: -0.06em;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
 }
 .hero h1 em {
   font-style: normal;
   color: var(--accent);
-  font-weight: 500;
+  font-weight: inherit;
   white-space: nowrap;
 }
 .hero-intro {
@@ -399,7 +404,7 @@ summary::marker {
   justify-content: center;
   gap: 22px;
   font-size: 13px;
-  font-weight: 750;
+  font-weight: var(--weight-bold);
   line-height: 20px;
   padding: 15px 21px;
   border-radius: 8px;
@@ -544,7 +549,7 @@ summary::marker {
 .portrait-label strong {
   font-size: 14px;
   display: block;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
 }
 .portrait-label div > span {
   display: block;
@@ -581,7 +586,7 @@ summary::marker {
   flex-shrink: 0;
 }
 .hero-bottom > p strong {
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   color: var(--text);
 }
 .hero-facts {
@@ -597,7 +602,7 @@ summary::marker {
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: -0.06em;
-  font-weight: 500;
+  font-weight: var(--weight-medium);
 }
 .hero-facts strong span {
   color: var(--accent);
@@ -665,7 +670,7 @@ summary::marker {
 }
 .project-copy h3 {
   font-size: 39px;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
   margin-bottom: 20px;
 }
 .project-copy .project-positioning {
@@ -705,7 +710,7 @@ summary::marker {
   border-bottom: 1px solid var(--line);
   padding: 8px 0;
   font-size: var(--text-small);
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   transition:
     border-color 0.2s,
     color 0.2s;
@@ -775,7 +780,7 @@ summary::marker {
   font-size: 10px;
   letter-spacing: 0.18em;
   color: #c8bfd5;
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
 }
 .art-footnote {
   position: absolute;
@@ -1000,7 +1005,7 @@ summary::marker {
 .about-current strong {
   font-size: 13px;
   color: var(--text);
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
 }
 .expertise-grid {
   display: grid;
@@ -1133,7 +1138,7 @@ summary::marker {
 }
 .timeline-date {
   font-size: var(--text-caption);
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   letter-spacing: 0.06em;
   color: var(--accent);
   display: block;
@@ -1144,7 +1149,7 @@ summary::marker {
   display: block;
   font-size: 19px;
   line-height: 1.4;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
   letter-spacing: -0.025em;
 }
 .timeline-org {
@@ -1215,7 +1220,7 @@ summary::marker {
 }
 .architecture-tabs button {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   color: var(--muted);
   padding: 22px 0;
   background: none;
@@ -1305,7 +1310,7 @@ summary::marker {
 }
 .architecture-node strong {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
 }
 .node-dot {
   position: absolute;
@@ -1337,7 +1342,7 @@ summary::marker {
 .architecture-detail strong {
   font-size: 14px;
   line-height: 24px;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
   display: block;
 }
 .architecture-detail p {
@@ -1531,7 +1536,7 @@ summary::marker {
   align-items: center;
   gap: 10px;
   font-size: 12px;
-  font-weight: 650;
+  font-weight: var(--weight-heading);
   color: var(--text);
 }
 .footer-inner > div {
@@ -2736,6 +2741,24 @@ summary::marker {
   }
 }
 /* Shared component sizes keep text and targets consistent at every breakpoint. */
+.project-positioning,
+.about-lead,
+.hero-facts > div > span,
+.timeline-org,
+.project-tech span,
+.expertise-technologies span,
+.theme-toggle,
+.hero-socials a,
+.contact-socials a,
+.footer-inner > div a {
+  font-weight: var(--weight-medium);
+}
+.project-details summary {
+  font-weight: var(--weight-semibold);
+}
+.hero h1 {
+  letter-spacing: -0.05em;
+}
 .expertise-technologies {
   align-self: start;
 }

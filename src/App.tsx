@@ -298,8 +298,7 @@ function Hero() {
         </p>
         <p className="hero-hello">Hi, I’m Satyajit.</p>
         <h1 id="hero-title">
-          Intelligent Systems
-          <br />
+          Intelligent Systems <br />
           <em>from Data to AI.</em>
         </h1>
         <p className="hero-intro">
@@ -568,8 +567,7 @@ function About() {
         </div>
         <div className="about-main reveal">
           <h2 id="about-title">
-            The Best Systems
-            <br />
+            The Best Systems <br />
             Make Complexity <em>Feel Simple.</em>
           </h2>
           <p className="about-lead">
@@ -678,8 +676,7 @@ function Experience() {
         <div className="experience-intro reveal">
           <p className="section-kicker">04 / THE JOURNEY</p>
           <h2 id="experience-title">
-            Built over Time.
-            <br />
+            Built over Time. <br />
             <em>Applied at Scale.</em>
           </h2>
           <p>
@@ -832,8 +829,7 @@ function Principles() {
         <div className="reveal">
           <p className="section-kicker">06 / HOW I WORK</p>
           <h2 id="principles-title">
-            Intent in
-            <br />
+            Intent in <br />
             <em>Every Decision.</em>
           </h2>
         </div>
@@ -883,8 +879,7 @@ function Contact() {
         <div className="contact-main">
           <div>
             <h2 id="contact-title">
-              Your Next Idea.
-              <br />
+              Your Next Idea. <br />
               <em>Let’s Talk.</em>
             </h2>
             <p>
@@ -925,9 +920,9 @@ function Contact() {
             </button>
             <span className="copy-status" role="status">
               {copyState === "copied"
-                ? "Email Copied"
+                ? "Email copied."
                 : copyState === "failed"
-                  ? "Please Select and Copy the Email"
+                  ? "Please select and copy the email."
                   : ""}
             </span>
           </div>

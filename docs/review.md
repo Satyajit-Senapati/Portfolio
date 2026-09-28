@@ -32,7 +32,13 @@ A second section-by-section review covered 320, 360, 600, 820, 1080, and 1440 px
 - Removed the miniature decorative label from the mobile about illustration and added solid caption backplates over project previews.
 - Verified no horizontal overflow, loaded images, and no browser exceptions across the reviewed widths and themes.
 
-## Production Audit Results
+## Capitalization and Weight Follow-up
+
+Reviewed all authored page headings, navigation, actions, captions, technology labels, descriptions, contribution bullets, and status feedback. Corrected “Multi-Agent Systems” and “Developer Tooling,” lowercased generic warehouse terms in prose, preserved the official scikit-learn spelling, and made copy feedback sentence case. Product names and acronyms retain their intended spelling.
+
+Standardized font-weight tokens across the UI and strengthened body text, supporting labels, and disclosures. Checked the computed weights and text wrapping at 320, 390, 820, and 1440 px in both themes; no horizontal overflow or browser exceptions. The hero accent now has the same weight as the main headline. Capitalization and emphasis rules are documented in the architecture notes.
+
+## Original Production Audit Results
 
 Lighthouse 12.8.2, default mobile simulation, local Vite production preview:
 

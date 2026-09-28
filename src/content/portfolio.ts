@@ -70,7 +70,7 @@ export const experience: Experience[] = [
       "Built metadata-driven Databricks workflows and Delta Lake transformations, including full and incremental loads from ADLS.",
     highlights: [
       "Implemented full and incremental ingestion from ADLS into Delta Lake using PySpark and Spark SQL.",
-      "Created modular parent–child notebooks and metadata-driven orchestration for Fact and Dimension tables.",
+      "Created modular parent–child notebooks and metadata-driven orchestration for fact and dimension tables.",
       "Improved workflow performance using parallel execution and parameterized notebooks.",
     ],
     technologies: [
@@ -88,10 +88,10 @@ export const experience: Experience[] = [
     organization: "TEKsystems Global Services",
     client: "Spreetail",
     summary:
-      "Built Raw, Bronze, and Silver lakehouse pipelines and dimensional models across Azure SQL, AWS S3, and ADLS.",
+      "Built raw, bronze, and silver lakehouse pipelines and dimensional models across Azure SQL, AWS S3, and ADLS.",
     highlights: [
-      "Designed ingestion from Azure SQL, AWS S3, and ADLS into Raw, Bronze, and Silver layers.",
-      "Built reusable notebooks, Fact and Dimension models, Synapse worker pipelines, and audit frameworks.",
+      "Designed ingestion from Azure SQL, AWS S3, and ADLS into raw, bronze, and silver layers.",
+      "Built reusable notebooks, fact and dimension models, Synapse worker pipelines, and audit frameworks.",
       "Deployed Synapse and Databricks artifacts through Azure DevOps CI/CD.",
     ],
     technologies: [
@@ -112,7 +112,7 @@ export const experience: Experience[] = [
       "Progressed from database administration to Spark ETL, predictive models, and Azure Databricks and Delta Lake pipelines.",
     highlights: [
       "Built large-scale Spark and Python ETL pipelines and curated datasets from AWS S3.",
-      "Developed traffic prediction, anomaly detection, and fault management models using Spark and Scikit-learn.",
+      "Developed traffic prediction, anomaly detection, and fault management models using Spark and scikit-learn.",
       "Designed PySpark and Delta Lake transformation pipelines with full and incremental logic.",
     ],
     technologies: [
@@ -172,7 +172,7 @@ export const localProjects = [
       "Evidence-based review and repair loops",
       "MCP integration and a local Control Center",
     ],
-    technologies: ["Multi-agent systems", "MCP", "Developer tooling"],
+    technologies: ["Multi-Agent Systems", "MCP", "Developer Tooling"],
     repository: "https://github.com/Satyajit-Senapati/Orqalis",
   },
   {
