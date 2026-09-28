@@ -369,10 +369,12 @@ summary::marker {
 }
 .hero-hello {
   color: var(--text);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: var(--weight-medium);
+  line-height: 1.6;
   margin-bottom: 17px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
+  word-spacing: 0.04em;
 }
 .hero h1 {
   font-size: clamp(40px, 4.45vw, 66px);
@@ -1722,7 +1724,7 @@ summary::marker {
     margin-bottom: 25px;
   }
   .hero-hello {
-    font-size: 17px;
+    font-size: 18px;
   }
   .portrait-disc {
     width: 275px;
@@ -2008,7 +2010,7 @@ summary::marker {
     margin-bottom: 22px;
   }
   .hero-hello {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 12px;
   }
   .hero-intro {
