@@ -2,19 +2,25 @@
 
 ## Experience
 
-The site tells a short engineering story: positioning, capabilities, career context, reference architectures, product explorations, engineering principles, and contact. The architecture lab provides technical depth without presenting a client-specific diagram as public documentation. Its patterns are based on technologies and workflows named in the resume.
+The page moves from personal identity to selected products, about, capabilities, career context, reference architectures, engineering principles, and contact. Products appear early so visitors can quickly reach real work. The architecture lab provides technical depth without presenting a client-specific diagram as public documentation. Its patterns are based on technologies and workflows named in the resume.
 
 ## Components and content
 
-`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data, including the InterviewOS and NEVRI live app links and the Orqalis and PracticeLab repository links. The resume is stored in `public/` and served for viewing and download.
+`src/App.tsx` contains the page sections and the small interactions: navigation, theme preference, experience disclosure, architecture stage selection, and email copy. `src/content/portfolio.ts` holds the editable data, including the DataRevia and NEVRI live app links and the Orqalis and PracticeLab repository links. The resume is stored in `public/` and served for viewing and download.
 
 ## Visual system
 
-The interface uses graphite/navy surfaces, cool silver text, and restrained teal to emphasize interactions and the data-flow motif. Typography, fine rules, technical grids, ambient color fields, and one architectural hero diagram provide the identity. Both themes use dedicated color tokens for the background treatments and content. CSS breakpoints reshape the page at tablet and mobile widths; the architecture flow becomes a vertical sequence on small screens.
+The interface uses ink surfaces, soft lilac, and warm ivory. Self-hosted Manrope provides a consistent type hierarchy. An original geometric Folded S logo and a custom digital avatar create a personal identity. Orbital linework around the portrait, restrained ambient light, and a dotted architecture canvas add texture without competing with content. Featured products use real public website captures in browser frames.
+
+Theme colors are CSS custom properties. The content width is capped at 1240px. At 1050px, the navigation becomes a menu to avoid a cramped tablet header. At 760px, the hero and project rows become vertical, architecture stages become a sequence, and contact is simplified. Below 600px, expertise uses one column for readable descriptions and technologies. All layouts work down to 320px.
 
 ## Motion and accessibility
 
-Motion is limited to entry reveals, quiet data-flow movement, and hover/focus feedback. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme preference persists locally and follows the system setting when set to **system**.
+Motion is limited to brief entry reveals and hover/focus feedback. There is no perpetual animation, typewriter, or custom cursor. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme preference persists locally and follows system changes when set to **System**. The menu closes on Escape, outside click, or navigation. Email copy reports success or a useful fallback without silently opening another app.
+
+## Assets and performance
+
+The avatar was generated from the owner’s supplied photo; the original photograph is not published. WebP delivery copies reduce image transfer size while the high-resolution PNG assets remain available. Product screenshots are lazy-loaded, while the hero portrait is preloaded with high fetch priority. The variable font is local and preloaded. React and CSS provide the interactions without an animation or component framework. Asset provenance, the image prompt, and brand rules are recorded in [design research](design-research.md).
 
 ## Deployment
 
