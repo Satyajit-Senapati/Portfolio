@@ -417,9 +417,13 @@ function Projects() {
                 rel="noopener noreferrer"
                 title={`Visit ${project.name}`}
               >
-                <div className={index === 0 ? "datarevia-art" : "nevri-art"}>
+                <div
+                  className={
+                    project.name === "DataRevia" ? "datarevia-art" : "nevri-art"
+                  }
+                >
                   <span className="art-caption">
-                    {index === 0
+                    {project.name === "DataRevia"
                       ? "KNOW THE CONCEPT. OWN THE ANSWER."
                       : "A QUIETER PLACE TO WRITE"}
                   </span>
@@ -431,7 +435,7 @@ function Projects() {
                       <small>{new URL(project.demo).hostname}</small>
                     </div>
                     <img
-                      src={`./images/${index === 0 ? "datarevia" : "nevri"}-preview.webp`}
+                      src={`./images/${project.name === "DataRevia" ? "datarevia" : "nevri"}-preview.webp`}
                       width="1200"
                       height="833"
                       alt={`Visit ${project.name} website`}
@@ -439,7 +443,7 @@ function Projects() {
                     />
                   </div>
                   <span className="art-footnote">
-                    {index === 0
+                    {project.name === "DataRevia"
                       ? "A Local-First Approach to Learning"
                       : "Space for Your Next Thought."}
                   </span>

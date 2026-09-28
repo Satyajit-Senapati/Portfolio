@@ -130,20 +130,6 @@ export const experience: Experience[] = [
 // Public demos were supplied by the owner; repository links are shown only for public projects.
 export const liveProjects = [
   {
-    name: "DataRevia",
-    kind: "LEARNING SYSTEM",
-    positioning: "A local-first workspace for technical interview preparation.",
-    description:
-      "Brings structured study guides, question banks, and progress tracking together for data, cloud, AI, and coding topics.",
-    details: [
-      "Structured study guides and question banks",
-      "Browser-local notes, bookmarks, and progress",
-      "Offline-ready core learning experience",
-    ],
-    technologies: ["React", "TypeScript", "IndexedDB"],
-    demo: "https://datarevia.sattylabs.workers.dev/",
-  },
-  {
     name: "NEVRI",
     kind: "PRODUCTIVITY APPLICATION",
     positioning: "A quieter place for notes, ideas, and everyday writing.",
@@ -157,6 +143,20 @@ export const liveProjects = [
     ],
     technologies: ["Firebase", "Web", "Android"],
     demo: "https://nevri-notes.web.app/",
+  },
+  {
+    name: "DataRevia",
+    kind: "LEARNING SYSTEM",
+    positioning: "A local-first workspace for technical interview preparation.",
+    description:
+      "Brings structured study guides, question banks, and progress tracking together for data, cloud, AI, and coding topics.",
+    details: [
+      "Structured study guides and question banks",
+      "Browser-local notes, bookmarks, and progress",
+      "Offline-ready core learning experience",
+    ],
+    technologies: ["React", "TypeScript", "IndexedDB"],
+    demo: "https://datarevia.sattylabs.workers.dev/",
   },
 ] satisfies (Project & { demo: string })[];
 

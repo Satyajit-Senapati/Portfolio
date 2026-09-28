@@ -24,6 +24,8 @@ Descriptions, contribution bullets, and status feedback use sentence case. Gener
 
 Manrope weight tokens distinguish body copy (450), supporting labels (500), controls (600), headings (650), and primary actions (700). The hero accent inherits its heading weight; color supplies emphasis. Avoid browser-default bold or automatic CSS capitalization for content.
 
+Section eyebrows and hero statistics use 600. Portrait and project captions, the about caption, contact email, and copy feedback use 500. These weights remain consistent in both themes and at every breakpoint.
+
 ## Motion and Accessibility Behavior
 
 Motion is limited to brief entry reveals and hover/focus feedback. There is no perpetual animation, typewriter, or custom cursor. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme preference persists locally and follows system changes when set to **System**. The menu closes on Escape, outside click, or navigation. Email copy reports success or a useful fallback without silently opening another app.

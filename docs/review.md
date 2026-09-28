@@ -38,6 +38,14 @@ Reviewed all authored page headings, navigation, actions, captions, technology l
 
 Standardized font-weight tokens across the UI and strengthened body text, supporting labels, and disclosures. Checked the computed weights and text wrapping at 320, 390, 820, and 1440 px in both themes; no horizontal overflow or browser exceptions. The hero accent now has the same weight as the main headline. Capitalization and emphasis rules are documented in the architecture notes.
 
+## Project Order and Typography Refinement
+
+NEVRI now appears before DataRevia. Preview styling, images, and captions follow project identity rather than array position; both website links were checked against their cards.
+
+Reviewed computed typography across all sections at 320, 390, 820, and 1440 px in both themes, with product and career disclosures expanded. Strengthened hero statistics to 600 and supporting captions and contact text to 500; reduced all-caps section labels from 700 to 600. Body copy stays at 450, headings at 650, and main actions at 700.
+
+Desktop and mobile section captures were inspected for readability. The local variable font loaded in every checked state, with no horizontal overflow at the intended content widths or browser exceptions. An initial narrow-screen test included a desktop scrollbar that reduced the content viewport below 320 px; the corrected test used the stated content widths. `npm run validate` passed.
+
 ## Original Production Audit Results
 
 Lighthouse 12.8.2, default mobile simulation, local Vite production preview:

@@ -162,7 +162,7 @@ summary::marker {
 .eyebrow {
   font-size: 12px;
   letter-spacing: 0.14em;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   line-height: 1.5;
   color: var(--muted);
 }
@@ -602,7 +602,7 @@ summary::marker {
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: -0.06em;
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
 }
 .hero-facts strong span {
   color: var(--accent);
@@ -2743,6 +2743,12 @@ summary::marker {
 /* Shared component sizes keep text and targets consistent at every breakpoint. */
 .project-positioning,
 .about-lead,
+.about-caption,
+.portrait-label div > span,
+.portrait-note,
+.art-footnote,
+.contact-email > a,
+.copy-status,
 .hero-facts > div > span,
 .timeline-org,
 .project-tech span,
