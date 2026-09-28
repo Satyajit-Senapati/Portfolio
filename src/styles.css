@@ -392,10 +392,10 @@ main { overflow: clip; }
 
 .principles-section { border-top: 1px solid var(--line-soft); background: radial-gradient(ellipse 50% 90% at 7% 50%, var(--ambient-blue), transparent 83%), var(--surface-main); }
 .principles-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(3rem, 7vw, 8rem); }
-.principle { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1.2rem; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
+.principle { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.2rem; align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--rule); }
 .principle:last-child { border-bottom: 1px solid var(--rule); }
-.principle > span { color: var(--accent); font: 700 .7rem var(--mono); }
-.principle h3 { margin-bottom: .4rem; font-size: 1.3rem; letter-spacing: -.03em; }
+.principle > span { padding-top: .25rem; color: var(--accent); font: 700 .7rem var(--mono); }
+.principle h3 { margin-bottom: .4rem; font-size: 1.3rem; line-height: 1.3; letter-spacing: -.03em; }
 .principle p { max-width: 530px; margin: 0; color: var(--copy-secondary); font-size: .93rem; }
 
 .contact-section { border-color: var(--rule); background: radial-gradient(ellipse 45% 100% at 90% 50%, rgba(27, 119, 132, .24), transparent 78%), #0b1c29; }
