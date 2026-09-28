@@ -10,7 +10,7 @@ The page moves from personal identity to selected products, about, capabilities,
 
 ## Visual system
 
-The interface uses ink surfaces, soft lilac, and warm ivory. Self-hosted Manrope provides a consistent type hierarchy. An original geometric Folded S logo and a custom digital avatar create a personal identity. Orbital linework around the portrait, restrained ambient light, and a dotted architecture canvas add texture without competing with content. Featured products use real public website captures in browser frames.
+The interface uses ink surfaces, soft lilac, and warm ivory. Self-hosted Manrope provides a consistent type hierarchy. The selected Woven Initials logo and a custom digital avatar create a personal identity. Orbital linework around the portrait, restrained ambient light, and a dotted architecture canvas add texture without competing with content. Featured products use real public website captures in browser frames.
 
 Theme colors are CSS custom properties. The content width is capped at 1240px. At 1050px, the navigation becomes a menu to avoid a cramped tablet header. At 760px, the hero and project rows become vertical, architecture stages become a sequence, and contact is simplified. Below 600px, expertise uses one column for readable descriptions and technologies. All layouts work down to 320px.
 

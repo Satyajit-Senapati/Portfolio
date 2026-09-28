@@ -65,4 +65,8 @@ The initial large PNG delivery was replaced with WebP copies: avatar approximate
 
 ## Release Gate
 
+### Selected Logo Follow-up
+
+Applied the owner's choice **07 / Woven Initials** to the header, footer, browser icon, README, and vector downloads. Reconstructed the generated concept as four smooth SVG paths and versioned the favicon URL to refresh browser caches. Checked the identity at 16, 24, 32, 48, and 64 px; reviewed desktop and mobile captures in both themes. Header/footer images loaded, the favicon references resolve, and the checked pages have no horizontal overflow or browser exceptions. Refreshed the README preview. The existing validation command passed.
+
 `npm run validate` passes ESLint, TypeScript, the production build, internal target checks, required asset checks, and structured-data parsing. GitHub Pages uses the existing relative-base deployment workflow.

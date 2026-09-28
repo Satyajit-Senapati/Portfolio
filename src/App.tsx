@@ -214,7 +214,7 @@ function Header({
         >
           <img
             className="brand-mark"
-            src="./favicon.svg"
+            src="./favicon.svg?v=5"
             alt=""
             aria-hidden="true"
           />
@@ -995,7 +995,7 @@ function App() {
       <footer className="site-footer">
         <div className="shell footer-inner">
           <a className="footer-brand" href="#top">
-            <img src="./favicon.svg" width="32" height="32" alt="" />
+            <img src="./favicon.svg?v=5" width="32" height="32" alt="" />
             Satyajit Senapati
           </a>
           <span>© {new Date().getFullYear()} · Built with Intent.</span>

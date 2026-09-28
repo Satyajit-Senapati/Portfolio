@@ -16,17 +16,19 @@ A personal engineering portfolio with an editorial hierarchy: a human introducti
 
 These are visual research references, not affiliations or endorsements. The supplied Figma portfolio’s assets and implementation were not imported.
 
-## Folded S Logo
+## Woven Initials Logo
 
-The mark is one continuous angular ribbon forming **S**, shared by Satyajit and Senapati. Two directional folds suggest movement from raw input to a finished system. A strong silhouette takes priority over decorative circuits, gradients, or tiny details.
+The owner selected **07 / Woven Initials** from the second concept round. Interlocking S ribbons reference Satyajit and Senapati; their diagonal cuts form a compact architectural silhouette. The concept was generated with the built-in image generation tool, then reconstructed as four smooth vector paths for production. The earlier Folded S remains in the exploration archive.
 
 - Master: `public/brand/satyajit-mark.svg`
 - Monochrome: `public/brand/satyajit-mark-mono.svg`
 - Browser/header tile: `public/favicon.svg`
-- Construction: 64 × 64 view box, filled vector path, no fonts or strokes.
-- Clear space: preserve at least 10 units of the view box around the visible mark.
+- Construction: 64 × 64 view box, four filled vector paths, no fonts or strokes.
+- Clear space: preserve at least 7 units of the view box around the visible mark.
 - Use: scale uniformly; use lilac on ink, violet on light, or one contrasting monochrome color.
 - Keep the unmodified silhouette at small sizes. Do not add shadows or gradients to the mark.
+
+The selected identity proof is `public/brand/explorations/selected.html`; the generated concept sheet is `public/brand/explorations/round-2.png`. The full prompt set and refinement prompt are in [logo-round-2-prompts.md](logo-round-2-prompts.md).
 
 ## Avatar
 

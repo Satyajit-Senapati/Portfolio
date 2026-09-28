@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/favicon.svg" width="72" height="72" alt="Satyajit Senapati folded S logo">
+  <img src="./public/favicon.svg" width="72" height="72" alt="Satyajit Senapati Woven Initials logo">
 </p>
 
 <h1 align="center">Satyajit Senapati</h1>
@@ -29,7 +29,7 @@
 
 ## Overview
 
-An original portfolio in ink, lilac, and warm ivory. A custom digital avatar and geometric **Folded S** identity introduce the person; real product previews, a career timeline, and interactive reference patterns show the work. The light theme is designed with the same care as the dark theme.
+An original portfolio in ink, lilac, and warm ivory. A custom digital avatar and **Woven Initials** identity introduce the person; real product previews, a career timeline, and interactive reference patterns show the work. The light theme is designed with the same care as the dark theme.
 
 <p align="center"><img src="./docs/portfolio-preview.png" alt="Portfolio desktop preview with the custom avatar and ink-and-lilac design"></p>
 
@@ -131,7 +131,7 @@ src/
   content/portfolio.ts     typed portfolio content
   styles.css               design tokens, themes, and responsive layout
 public/
-  favicon.svg              folded S app icon and header logo
+  favicon.svg              Woven Initials app icon and header logo
   brand/                   standalone and monochrome vector marks
   fonts/                   Manrope variable font and OFL license
   images/                  generated avatar and real product previews
