@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/favicon.svg" width="72" height="72" alt="Satyajit Senapati Woven Initials logo">
+  <img src="./public/brand/satyajit-tile.svg" width="72" height="72" alt="Satyajit Senapati Woven Initials logo">
 </p>
 
 <h1 align="center">Satyajit Senapati</h1>
@@ -13,7 +13,7 @@
   <img alt="GitHub Pages ready" src="https://img.shields.io/badge/GitHub%20Pages-ready-087d83?style=flat-square&logo=github&logoColor=white">
   <img alt="React 19" src="https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white">
   <img alt="Strict TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?style=flat-square&logo=typescript&logoColor=white">
-  <img alt="Dark, light and system themes" src="https://img.shields.io/badge/themes-dark%20%7C%20light%20%7C%20system-263641?style=flat-square">
+  <img alt="Dark and light themes" src="https://img.shields.io/badge/themes-dark%20%7C%20light-263641?style=flat-square">
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@
 
 An original portfolio in ink, lilac, and warm ivory. A custom digital avatar and **Woven Initials** identity introduce the person; real product previews, a career timeline, and interactive reference patterns show the work. The light theme is designed with the same care as the dark theme.
 
-<p align="center"><img src="./docs/portfolio-preview.png" alt="Portfolio desktop preview with the custom avatar and ink-and-lilac design"></p>
+<p align="center"><img src="./docs/portfolio-preview.jpg" alt="Portfolio hero with Satyajit Senapati's avatar, engineering introduction, and primary actions"></p>
 
 **[Explore the Portfolio](https://satyajit-senapati.github.io/Portfolio/)** · **[Download the Resume](./public/Satyajit-Senapati-Resume.pdf)** · **[Design Research](./docs/design-research.md)**
 
@@ -65,13 +65,23 @@ Open [http://localhost:4000/](http://localhost:4000/). On macOS or Linux, use `n
 
 ## Validation
 
+### Reusable UI/UX Skills
+
+The repository includes a [portable frontend skill collection](skills/frontend/README.md) with separate art direction, UX, implementation, motion, accessibility, responsive, design-system, performance, and visual-review skills. `AGENTS.md` routes tasks to the relevant specialists; `.agents/skills/` provides native Codex discovery. See the collection guide for direct invocation and unchanged reuse in other repositories.
+
+Validate the collection with `npm run check:skills`. Upstream versions, licenses, and the assessment of `frontend-design-complete` are recorded in [source notes](skills/frontend/SOURCES.md).
+
+### Site Checks
+
 Run the project gate before a release:
 
 ```powershell
 npm.cmd run validate
 ```
 
-This runs ESLint, strict TypeScript compilation, a Vite production build, and checks for broken internal targets and missing published assets, including the avatar, project previews, font, and logo. The output is written to `dist/`. Visual and interaction checks are recorded in [the release review](docs/review.md).
+This runs ESLint, strict TypeScript compilation, a Vite production build, and checks for literal internal targets and missing published assets, including the avatar, project previews, font, and logo. The output is written to `dist/`.
+
+Before release, also check the rendered page at 320, 390, 768, 1024, and 1440 px in both themes. Use the keyboard to open the mobile menu and traverse its links; verify Escape restores focus. Check all three top links from lower sections, theme persistence, disclosures, architecture controls, and email-copy feedback. Source checks do not replace browser interaction testing.
 
 To inspect the production build locally:
 
@@ -87,7 +97,7 @@ npm.cmd run preview
 | Content       | Typed, version-controlled records in `src/content/portfolio.ts`                                    |
 | Presentation  | Semantic components in `src/App.tsx` and CSS design tokens in `src/styles.css`                     |
 | Interactions  | Native disclosure for experience/projects, selectable architecture stages, mobile menu, email copy |
-| Appearance    | Dark, light, and system modes; preference stored in browser local storage                          |
+| Appearance    | Site-controlled dark and light themes; dark by default, preference saved locally                   |
 | Accessibility | Skip link, visible focus, semantic sections, keyboard controls, and reduced-motion support         |
 | Metadata      | Open Graph card, Twitter card, Person structured data, canonical URL, sitemap, and robots file     |
 
@@ -116,12 +126,14 @@ Vite uses a relative asset base, so the build works at a project Pages path or a
 | Themes, layout, and responsive rules                               | `src/styles.css`                         |
 | Browser metadata and structured data                               | `index.html`                             |
 | Downloadable resume                                                | `public/Satyajit-Senapati-Resume.pdf`    |
-| Social preview artwork                                             | `public/og.png`                          |
+| Social preview artwork and editable source                         | `public/og.png`, `scripts/social-card.html` |
 | Digital avatar and product previews                                | `public/images/`                         |
 | Vector identity and browser icon                                   | `public/brand/` and `public/favicon.svg` |
 | Self-hosted typography and license                                 | `public/fonts/`                          |
 
 The resume lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information. DataRevia and NEVRI link to their live apps; Orqalis and PracticeLab link to their public repositories.
+
+The social card is a 1200 × 630 PNG composed from the original avatar, logo, and local Manrope font. With the dev server running, open [the card source](http://localhost:4000/scripts/social-card.html) and click the image to download a regenerated `og.png`. Replace `public/og.png` with that file; site validation checks its dimensions against the Open Graph metadata.
 
 ## Project Structure
 
@@ -131,8 +143,8 @@ src/
   content/portfolio.ts     typed portfolio content
   styles.css               design tokens, themes, and responsive layout
 public/
-  favicon.svg              Woven Initials app icon and header logo
-  brand/                   standalone and monochrome vector marks
+  favicon.svg              Woven Initials variant optimized for small sizes
+  brand/                   original tile, standalone, and monochrome marks
   fonts/                   Manrope variable font and OFL license
   images/                  generated avatar and real product previews
   og.png                   social preview card
@@ -141,5 +153,5 @@ scripts/prepare-pages.mjs  deployment metadata generation
 .github/workflows/deploy.yml
 docs/architecture.md
 docs/design-research.md
-docs/review.md
+docs/portfolio-preview.jpg  desktop hero shown in this README
 ```

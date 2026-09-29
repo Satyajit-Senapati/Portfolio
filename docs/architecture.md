@@ -14,6 +14,8 @@ The interface uses ink surfaces, soft lilac, and warm ivory. Self-hosted Manrope
 
 Theme colors are CSS custom properties. The content width is capped at 1240px. At 1050px, the navigation becomes a menu to avoid a cramped tablet header. At 760px, the hero and project rows become vertical, architecture stages become a sequence, and contact is simplified. Below 600px, expertise uses one column for readable descriptions and technologies. All layouts work down to 320px.
 
+The body fits the available document width, including the space occupied by non-overlay scrollbars at a 320px viewport. Header controls precede the navigation links in document and visual order, so opening the compact menu keeps its links next in the forward Tab sequence. The `#top` anchor belongs to the stationary page wrapper; the header remains sticky inside it. Header and footer top links therefore return to the document start.
+
 Body, supporting, and caption text use shared 15px, 13px, and 12px tokens. Expertise cards share grid rows through CSS subgrid so text wrapping cannot misalign their headings or technology dividers. Local project cards use flexible vertical layouts to keep repository actions aligned. Small icon controls have a minimum 44px target size.
 
 ## Capitalization and Text Weight
@@ -30,7 +32,7 @@ Text spacing follows scale: large display headings use -0.035em, component headi
 
 ## Motion and Accessibility Behavior
 
-Motion is limited to brief entry reveals and hover/focus feedback. There is no perpetual animation, typewriter, or custom cursor. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme preference persists locally and follows system changes when set to **System**. The menu closes on Escape, outside click, or navigation. Email copy reports success or a useful fallback without silently opening another app.
+Motion is limited to brief entry reveals and hover/focus feedback. There is no perpetual animation, typewriter, or custom cursor. The site respects `prefers-reduced-motion`. It uses native links, buttons, and disclosure elements, a skip link, visible focus styles, and semantic sections. The theme switches between the site's **Dark** and **Light** palettes and persists locally. Dark is the default, including for legacy System preferences or unavailable storage; browser/OS color preference is not consulted. The initial HTML script and React use the same fallback. Each theme declares `color-scheme: only dark` or `only light` to request preservation of its colors and matching native controls. An owner-approved `darkreader-lock` meta tag prevents Dark Reader from recoloring the site on reload. This is a targeted opt-out, not a guarantee against all extensions; forced-color accessibility modes remain available. The menu closes on Escape, outside click, or navigation. Email copy reports success or a useful fallback without silently opening another app.
 
 ## Assets and performance
 

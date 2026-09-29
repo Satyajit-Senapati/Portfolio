@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "check:site": "node scripts/check-site.mjs",
+    "check:skills": "node skills/frontend/scripts/validate.mjs && node --test skills/frontend/scripts/collection.test.mjs",
     "validate": "npm run lint && npm run build && npm run check:site"
   },
   "dependencies": {

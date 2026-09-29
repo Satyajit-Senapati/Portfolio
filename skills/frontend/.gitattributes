@@ -1,0 +1,3 @@
+* text=auto eol=lf
+**/references/upstream/** -text
+**/references/interface-guidelines/** -text

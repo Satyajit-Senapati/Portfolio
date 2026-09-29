@@ -9,7 +9,7 @@ import {
   profile,
 } from "./content/portfolio";
 
-type ThemePreference = "dark" | "light" | "system";
+type ThemePreference = "dark" | "light";
 
 function ArrowIcon({ direction = "up" }: { direction?: "up" | "down" }) {
   return direction === "down" ? (
@@ -55,29 +55,17 @@ function ThemeIcon({ theme }: { theme: ThemePreference }) {
         <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
       </svg>
     );
-  if (theme === "dark")
-    return (
-      <svg
-        className="theme-glyph"
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinejoin="round"
-      >
-        <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z" />
-      </svg>
-    );
   return (
     <svg
       className="theme-glyph"
       aria-hidden="true"
       viewBox="0 0 24 24"
       fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinejoin="round"
     >
-      <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" />
-      <path d="M12 4a8 8 0 0 0 0 16Z" fill="currentColor" />
+      <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z" />
     </svg>
   );
 }
@@ -116,34 +104,25 @@ function useTheme() {
   const [preference, setPreference] = useState<ThemePreference>(() => {
     try {
       const value = localStorage.getItem("portfolio-theme");
-      return value === "dark" || value === "light" ? value : "system";
+      return value === "light" ? "light" : "dark";
     } catch {
-      return "system";
+      return "dark";
     }
   });
 
   useEffect(() => {
-    const media = matchMedia("(prefers-color-scheme: light)");
-    const apply = () => {
-      const resolved =
-        preference === "system"
-          ? media.matches
-            ? "light"
-            : "dark"
-          : preference;
-      document.documentElement.dataset.theme = resolved;
-      document
-        .querySelector('meta[name="theme-color"]')
-        ?.setAttribute("content", resolved === "light" ? "#f6f4ef" : "#111115");
-    };
-    apply();
-    media.addEventListener("change", apply);
+    document.documentElement.dataset.theme = preference;
+    document
+      .querySelector('meta[name="color-scheme"]')
+      ?.setAttribute("content", `only ${preference}`);
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", preference === "light" ? "#f6f4ef" : "#111115");
     try {
       localStorage.setItem("portfolio-theme", preference);
     } catch {
       /* preference is optional */
     }
-    return () => media.removeEventListener("change", apply);
   }, [preference]);
 
   return { preference, setPreference };
@@ -192,17 +171,12 @@ function Header({
     };
   }, [menuOpen]);
 
-  const nextTheme = () =>
-    setTheme(
-      theme === "system" ? "dark" : theme === "dark" ? "light" : "system",
-    );
-  const themeLabel =
-    theme === "system" ? "System" : theme === "dark" ? "Dark" : "Light";
+  const nextTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+  const themeLabel = theme === "dark" ? "Dark" : "Light";
 
   return (
     <header
       className={`site-header${scrolled ? " is-scrolled" : ""}`}
-      id="top"
       ref={headerRef}
     >
       <div className="shell header-inner">
@@ -214,12 +188,35 @@ function Header({
         >
           <img
             className="brand-mark"
-            src="./favicon.svg?v=5"
+            src="./brand/satyajit-tile.svg"
             alt=""
             aria-hidden="true"
           />
           <span className="brand-name">Satyajit Senapati</span>
         </a>
+        <div className="header-actions">
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={nextTheme}
+            aria-label={`Theme: ${themeLabel}. Change theme`}
+            title={`Theme: ${themeLabel}. Click to switch`}
+          >
+            <ThemeIcon theme={theme} />
+            <span>{themeLabel}</span>
+          </button>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="site-nav"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         <nav
           className={`site-nav${menuOpen ? " is-open" : ""}`}
           id="site-nav"
@@ -244,29 +241,6 @@ function Header({
             Contact <ArrowIcon />
           </a>
         </nav>
-        <div className="header-actions">
-          <button
-            className="theme-toggle"
-            type="button"
-            onClick={nextTheme}
-            aria-label={`Theme: ${themeLabel}. Change theme`}
-            title={`Theme: ${themeLabel}. Click to switch`}
-          >
-            <ThemeIcon theme={theme} />
-            <span>{themeLabel}</span>
-          </button>
-          <button
-            className="menu-toggle"
-            type="button"
-            aria-expanded={menuOpen}
-            aria-controls="site-nav"
-            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span></span>
-            <span></span>
-          </button>
-        </div>
       </div>
     </header>
   );
@@ -976,7 +950,7 @@ function App() {
     };
   }, []);
   return (
-    <>
+    <div id="top">
       <a className="skip-link" href="#main">
         Skip to Content
       </a>
@@ -994,7 +968,7 @@ function App() {
       <footer className="site-footer">
         <div className="shell footer-inner">
           <a className="footer-brand" href="#top">
-            <img src="./favicon.svg?v=5" width="32" height="32" alt="" />
+            <img src="./brand/satyajit-tile.svg" width="32" height="32" alt="" />
             Satyajit Senapati
           </a>
           <span>© {new Date().getFullYear()} · Built with Intent.</span>
@@ -1008,7 +982,7 @@ function App() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
 

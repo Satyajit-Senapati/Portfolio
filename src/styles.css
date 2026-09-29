@@ -33,13 +33,13 @@
   --glow: rgba(157, 127, 224, 0.13);
   --ink: #211a31;
   --radius: 20px;
-  color-scheme: dark;
+  color-scheme: only dark;
   --text-body: 15px;
   --text-small: 13px;
   --text-caption: 12px;
 }
 :root[data-theme="light"] {
-  color-scheme: light;
+  color-scheme: only light;
   --bg: #f6f4ef;
   --surface: #fffefa;
   --surface-raised: #eeebe6;
@@ -64,7 +64,6 @@ html {
 }
 body {
   margin: 0;
-  min-width: 320px;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -257,7 +256,6 @@ summary::marker {
   display: flex;
   align-items: center;
   gap: 26px;
-  margin-left: auto;
 }
 .site-nav a {
   font-size: 13px;
@@ -298,19 +296,23 @@ summary::marker {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-left: auto;
+  margin-right: 10px;
 }
 .theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  border-left: 1px solid var(--line);
-  background: transparent;
-  padding: 9px 0 9px 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 9px 14px;
   font-size: 12px;
   line-height: 20px;
   min-width: 78px;
   color: var(--muted);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 .theme-toggle svg {
   width: 17px;
@@ -318,6 +320,8 @@ summary::marker {
 }
 .theme-toggle:hover {
   color: var(--text);
+  background: var(--soft);
+  border-color: var(--faint);
 }
 .menu-toggle {
   display: none;
@@ -1688,12 +1692,12 @@ summary::marker {
   }
   .header-actions {
     margin-left: auto;
+    margin-right: 0;
   }
   .menu-toggle {
     display: block;
   }
   .theme-toggle {
-    border: 0;
     padding: 9px;
     min-width: 70px;
   }
@@ -1983,7 +1987,7 @@ summary::marker {
     height: 31px;
   }
   .header-actions {
-    gap: 3px;
+    gap: 8px;
   }
   .theme-toggle {
     min-width: 37px;

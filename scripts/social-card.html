@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio social card source</title>
+    <style>
+      html, body { margin: 0; background: #111115; }
+      img { display: block; width: 1200px; height: 630px; }
+    </style>
+  </head>
+  <body>
+    <a id="download" download="og.png" aria-label="Download the 1200 by 630 social card">
+      <img id="preview" width="1200" height="630" alt="Satyajit Senapati, Data &amp; AI Engineer. Intelligent Systems from Data to AI." />
+    </a>
+    <script type="module">
+      // Open /scripts/social-card.html on the local Vite server, then click to
+      // download. The canvas uses the original assets and exports lossless PNG.
+      const font = new FontFace("Manrope", "url(/fonts/manrope-latin.woff2)", {
+        weight: "200 800",
+      });
+      document.fonts.add(await font.load());
+      const loadImage = async (src) => {
+        const image = new Image();
+        image.src = src;
+        await image.decode();
+        return image;
+      };
+      const [avatar, logo] = await Promise.all([
+        loadImage("/images/satyajit-avatar.png"),
+        loadImage("/brand/satyajit-tile.svg"),
+      ]);
+      const canvas = document.createElement("canvas");
+      canvas.width = 1200;
+      canvas.height = 630;
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#111115";
+      ctx.fillRect(0, 0, 1200, 630);
+      const glow = ctx.createRadialGradient(960, 315, 80, 960, 315, 460);
+      glow.addColorStop(0, "#262131");
+      glow.addColorStop(1, "#111115");
+      ctx.fillStyle = glow;
+      ctx.fillRect(0, 0, 1200, 630);
+
+      ctx.drawImage(logo, 64, 54, 52, 52);
+      const text = (content, x, y, size, weight, color) => {
+        ctx.font = `${weight} ${size}px Manrope`;
+        ctx.fillStyle = color;
+        ctx.fillText(content, x, y);
+      };
+      text("PERSON / ENGINEER / BUILDER", 134, 86, 14, 600, "#a9a7b2");
+      text("Satyajit", 64, 222, 66, 650, "#f0eef3");
+      text("Senapati", 64, 299, 66, 650, "#f0eef3");
+      text("Data & AI Engineer", 67, 353, 27, 600, "#c2aff5");
+      text("Intelligent Systems", 67, 444, 31, 500, "#f0eef3");
+      text("from Data to AI.", 67, 488, 31, 500, "#c2aff5");
+
+      const circle = (x, y, radius) => {
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+      };
+      circle(947, 319, 226);
+      ctx.strokeStyle = "#36303f";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.save();
+      circle(947, 319, 204);
+      ctx.clip();
+      ctx.fillStyle = "#6e6189";
+      ctx.fillRect(743, 115, 408, 408);
+      ctx.drawImage(avatar, 723, 111, 448, 448);
+      ctx.restore();
+
+      ctx.strokeStyle = "#c2aff5";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      for (let i = 0; i < 8; i++) {
+        const angle = (i * Math.PI) / 4;
+        ctx.moveTo(1106, 91);
+        ctx.lineTo(1106 + Math.cos(angle) * 22, 91 + Math.sin(angle) * 22);
+      }
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(64, 548);
+      ctx.lineTo(606, 548);
+      ctx.strokeStyle = "#303037";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      text("satyajit-senapati.github.io/Portfolio", 67, 589, 16, 500, "#a9a7b2");
+
+      const png = canvas.toDataURL("image/png");
+      document.getElementById("preview").src = png;
+      document.getElementById("download").href = png;
+    </script>
+  </body>
+</html>

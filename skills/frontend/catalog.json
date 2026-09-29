@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    { "name": "frontend-selector", "path": "frontend-selector" },
+    { "name": "taste-skill", "path": "art-direction/taste-skill" },
+    { "name": "ui-ux-pro-max", "path": "ux/ui-ux-pro-max" },
+    { "name": "claude-design-skills", "path": "ux/claude-design-skills" },
+    { "name": "frontend-design", "path": "implementation/frontend-design" },
+    { "name": "design-motion-principles", "path": "motion/design-motion-principles" },
+    { "name": "web-accessibility", "path": "accessibility/web-accessibility" },
+    { "name": "responsive-design", "path": "responsive/responsive-design" },
+    { "name": "project-design-system", "path": "design-system/project-design-system" },
+    { "name": "react-best-practices", "path": "performance/react-best-practices" },
+    { "name": "web-design-guidelines", "path": "review/web-design-guidelines" },
+    { "name": "visual-qa", "path": "review/visual-qa" }
+  ]
+}
