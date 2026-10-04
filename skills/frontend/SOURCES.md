@@ -1,6 +1,6 @@
 # Sources and adaptation notes
 
-Reviewed and retrieved on 2026-09-29. `sources.lock.json` records immutable commits, upstream-to-local paths, and SHA-256 digests for every vendored file. These files are source snapshots, not endorsements by their authors of this adapter collection.
+Original sources reviewed and retrieved on 2026-09-29; the Stitch planning references were added on 2026-10-04. `sources.lock.json` records immutable commits, upstream-to-local paths, and SHA-256 digests for every vendored file. These files are source snapshots, not endorsements by their authors of this adapter collection.
 
 | Layer | Source | Pinned commit | Terms / packaging |
 | --- | --- | --- | --- |
@@ -8,6 +8,7 @@ Reviewed and retrieved on 2026-09-29. `sources.lock.json` records immutable comm
 | UX intelligence | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | `09170eec67eefd46a7ae85de61b40c194020f997` | MIT; skill, data, supporting references, search scripts; original data provenance/font license metadata retained |
 | Implementation | [anthropics/skills, frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) | `8a1541c4a3ffa5a20a5a91de0dcf3f0bab1d1ef4` | Apache-2.0; original skill and LICENSE.txt retained |
 | UX process | [richhemsley3/claude-design-skills](https://github.com/richhemsley3/claude-design-skills) | `1185d0d84974eaed6e927b953243c96754de02b6` | MIT; stage-specific source guides and supporting resources |
+| Stitch visual planning | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | `0337446dadde6f8c94210444e2aa9d546126480f` | Apache-2.0; generate-design, manage-design-system, enhance-prompt, design-md, and site-md guides with selected examples/references and original license |
 | Motion | [kylezantos/design-motion-principles](https://github.com/kylezantos/design-motion-principles) | `4a9ca879f24a361f4dca4174fe2da0f67b5ddee3` | MIT; source workflows/references and license |
 | React performance / UI review | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `063bee94c3f4df8453406c830b0a7df0f2860278` | MIT declared in repository README; original declaration retained as LICENSE-SOURCE.md (no standalone license file found in that snapshot) |
 | Interface checklist | [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines) | `e3d624baaf29dc1fc645aff3e38f03e564d2d6b1` | MIT; command.md and original LICENSE |
@@ -38,3 +39,6 @@ Decision: retain independently selected layers and original responsive/accessibi
 - UI review can use a pinned offline checklist; fresh retrieval is reserved for requests needing current guidance.
 - Tool instructions resolve relative to the local snapshot. No fixed `.claude` path, global install, API key, runtime download, or upstream install script is required for ordinary use.
 - Codex entrypoints use the documented [.agents/skills repository location](https://learn.chatgpt.com/docs/build-skills). They are generated flat so category nesting does not depend on host discovery behavior.
+- Stitch is optional visual exploration after a brief. It does not replace product/flow planning or automatically begin implementation. Local prompt preparation works without live tools; generation and uploads require the host's configured connection and the user's relevant authorization.
+- Stitch's upstream guides span different generations of token handling. Use attached project-level design systems when supported; include relevant tokens for self-contained web prompts when no system is attached. Actual tool schemas govern identifiers and parameters.
+- The Stitch adapter uses the target repo's documentation and framework rather than fixed `.stitch/`, `site/public/`, or React/Tailwind requirements. It does not activate sibling build-loop/upload skills or run source scripts. Existing authorization governs service writes, rather than an unconditional additional confirmation checkpoint.

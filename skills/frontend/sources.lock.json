@@ -979,6 +979,82 @@
           "sha256": "6cd1609c9c12233507cdd2ce0d32e9a721e3c27494951be06b90090deeeb7af2"
         }
       ]
+    },
+    {
+      "id": "stitch",
+      "repo": "google-labs-code/stitch-skills",
+      "sha": "0337446dadde6f8c94210444e2aa9d546126480f",
+      "retrieved": "2026-10-04",
+      "prefix": "plugins/",
+      "dest": "planning/stitch-planning/references/upstream",
+      "license": "LICENSE",
+      "files": [
+        {
+          "upstream": "LICENSE",
+          "local": "planning/stitch-planning/references/upstream/LICENSE",
+          "sha256": "b4133a55232c0996713349891dc55469d46a16ec027c033c9e4108b2149abb42"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/generate-design/SKILL.md",
+          "local": "planning/stitch-planning/references/upstream/generate-design/guide.md",
+          "sha256": "d03d2de3a0cefbde2ca7b8cdc2c96e8164a8b9400fe3a9b97a3aa6ce37ee638d"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/generate-design/examples/enhanced-prompt.md",
+          "local": "planning/stitch-planning/references/upstream/generate-design/examples/enhanced-prompt.md",
+          "sha256": "8ca345151e70d6067bd460fc63fcbd455d60cc87f066e7c70160e3f277f857f5"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/generate-design/references/design-mappings.md",
+          "local": "planning/stitch-planning/references/upstream/generate-design/references/design-mappings.md",
+          "sha256": "add62a31b8507d7ce22f345f0104725962f0c62a484d4ff975821cefb28ad10b"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/generate-design/references/prompt-keywords.md",
+          "local": "planning/stitch-planning/references/upstream/generate-design/references/prompt-keywords.md",
+          "sha256": "8ca5c0cf251a6801d0bdccf5cf59271be172f7c2fd83b298c54d9b3ceb498fdf"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/manage-design-system/SKILL.md",
+          "local": "planning/stitch-planning/references/upstream/manage-design-system/guide.md",
+          "sha256": "5ce0b8adb5261e8a926fc0942d679cda0421ac29e8159a6ee38e5d940bc9658e"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/manage-design-system/examples/metadata.json",
+          "local": "planning/stitch-planning/references/upstream/manage-design-system/examples/metadata.json",
+          "sha256": "4d93c7d897caa26a3b0f26e7b0312017555b2d8beb997c4edd1a3f6e478e8c90"
+        },
+        {
+          "upstream": "plugins/stitch-design/skills/manage-design-system/reference/tool-schema.md",
+          "local": "planning/stitch-planning/references/upstream/manage-design-system/reference/tool-schema.md",
+          "sha256": "b0d4f0d80127c3f576ddb3412543e7f99dcd08c3e88c9712987c3c7359c613f0"
+        },
+        {
+          "upstream": "plugins/stitch-utilities/skills/enhance-prompt/SKILL.md",
+          "local": "planning/stitch-planning/references/upstream/enhance-prompt/guide.md",
+          "sha256": "ccb200c798072438b642b1fa6a5c515563159e2fab3d56e813d76d8afa9a7ce6"
+        },
+        {
+          "upstream": "plugins/stitch-utilities/skills/enhance-prompt/references/KEYWORDS.md",
+          "local": "planning/stitch-planning/references/upstream/enhance-prompt/references/KEYWORDS.md",
+          "sha256": "b837324b0a51bed4521f2b55c860a4dd729a45e597fe569bc576dba95dd3bbb8"
+        },
+        {
+          "upstream": "plugins/stitch-utilities/skills/design-md/SKILL.md",
+          "local": "planning/stitch-planning/references/upstream/design-md/guide.md",
+          "sha256": "eb15f44646528f3a087ce023329ae699c1b6e803662af68338e1eb1c0406b59b"
+        },
+        {
+          "upstream": "plugins/stitch-utilities/skills/design-md/examples/DESIGN.md",
+          "local": "planning/stitch-planning/references/upstream/design-md/examples/DESIGN.md",
+          "sha256": "e856ef5f910f564f3b25a20720e9c74a0691e407e5d0bd8e0abf97b2b7225a24"
+        },
+        {
+          "upstream": "plugins/stitch-utilities/skills/site-md/SKILL.md",
+          "local": "planning/stitch-planning/references/upstream/site-md/guide.md",
+          "sha256": "679a0020ea2fbfdc4c4db84c32936eaea203263ebccb4d217eff1cf418d3de60"
+        }
+      ]
     }
   ]
 }

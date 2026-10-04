@@ -5,6 +5,7 @@
     { "name": "taste-skill", "path": "art-direction/taste-skill" },
     { "name": "ui-ux-pro-max", "path": "ux/ui-ux-pro-max" },
     { "name": "claude-design-skills", "path": "ux/claude-design-skills" },
+    { "name": "stitch-planning", "path": "planning/stitch-planning" },
     { "name": "frontend-design", "path": "implementation/frontend-design" },
     { "name": "design-motion-principles", "path": "motion/design-motion-principles" },
     { "name": "web-accessibility", "path": "accessibility/web-accessibility" },

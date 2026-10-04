@@ -67,7 +67,7 @@ Open [http://localhost:4000/](http://localhost:4000/). On macOS or Linux, use `n
 
 ### Reusable UI/UX Skills
 
-The repository includes a [portable frontend skill collection](skills/frontend/README.md) with separate art direction, UX, implementation, motion, accessibility, responsive, design-system, performance, and visual-review skills. `AGENTS.md` routes tasks to the relevant specialists; `.agents/skills/` provides native Codex discovery. See the collection guide for direct invocation and unchanged reuse in other repositories.
+The repository includes a [portable frontend skill collection](skills/frontend/README.md) with separate art direction, UX, optional Google Stitch planning, implementation, motion, accessibility, responsive, design-system, performance, and visual-review skills. `AGENTS.md` routes tasks to the relevant specialists; `.agents/skills/` provides native Codex discovery. See the collection guide for direct invocation and copy-only reuse in other repositories.
 
 Validate the collection with `npm run check:skills`. Upstream versions, licenses, and the assessment of `frontend-design-complete` are recorded in [source notes](skills/frontend/SOURCES.md).
 

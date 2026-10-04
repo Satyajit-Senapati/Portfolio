@@ -8,9 +8,11 @@ import { install } from './install.mjs';
 import { validate } from './validate.mjs';
 import { parseCsv, rankRows, search } from './search-data.mjs';
 
+const entries = await catalog();
+
 test('bundle entrypoints, authored links, licenses, and source hashes validate', async () => {
   const result = await validate();
-  assert.equal(result.skills, 12);
+  assert.equal(result.skills, entries.length);
   assert.ok(result.sourceFiles > 100);
 });
 
@@ -19,14 +21,34 @@ test('copy works in a path with spaces; native entries resolve; repeat is idempo
   const root = path.join(repo, 'portable bundle');
   await cp(bundleRoot, root, { recursive: true });
   await validate(root);
-  assert.equal((await install({ repo, root })).created, 12);
+  assert.equal((await install({ repo, root })).created, entries.length);
   assert.equal((await install({ repo, root })).created, 0);
-  assert.equal((await install({ repo, root, agent: 'claude' })).created, 12);
+  assert.equal((await install({ repo, root, agent: 'claude' })).created, entries.length);
   for (const entry of await catalog(root)) {
     const file = path.join(repo, '.agents', 'skills', entry.name, 'SKILL.md');
     const text = await readFile(file, 'utf8');
     const target = /\]\(([^)]+)\)/.exec(text)[1];
     assert.equal(path.resolve(path.dirname(file), decodeURIComponent(target)), entry.file);
+  }
+});
+
+test('copy-only bundle and Codex entrypoints resolve in a new repo without installation', async () => {
+  const sourceRepo = await mkdtemp(path.join(os.tmpdir(), 'frontend skills package source '));
+  const sourceBundle = path.join(sourceRepo, 'skills/frontend');
+  await cp(bundleRoot, sourceBundle, { recursive: true });
+  await install({ repo: sourceRepo, root: sourceBundle });
+  const repo = await mkdtemp(path.join(os.tmpdir(), 'frontend skills copy only '));
+  const root = path.join(repo, 'skills/frontend');
+  await cp(sourceBundle, root, { recursive: true });
+  await cp(path.join(sourceRepo, '.agents/skills'), path.join(repo, '.agents/skills'), { recursive: true });
+  await validate(root);
+  for (const entry of await catalog(root)) {
+    const file = path.join(repo, '.agents/skills', entry.name, 'SKILL.md');
+    const text = await readFile(file, 'utf8');
+    const link = /\]\(([^)]+)\)/.exec(text)[1];
+    const target = path.resolve(path.dirname(file), decodeURIComponent(link));
+    assert.equal(target, entry.file);
+    assert.equal(await readFile(target, 'utf8'), await readFile(path.join(bundleRoot, entry.path, 'SKILL.md'), 'utf8'));
   }
 });
 
