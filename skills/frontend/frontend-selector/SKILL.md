@@ -21,7 +21,7 @@ The first skill in each row owns the task. The others provide focused input, not
 | Plan or compare visual concepts with Google Stitch | [stitch-planning](../planning/stitch-planning/SKILL.md); add [taste-skill](../art-direction/taste-skill/SKILL.md) only for an unresolved art direction decision |
 | Build a dashboard, form, or product UI | [frontend-design](../implementation/frontend-design/SKILL.md), [ui-ux-pro-max](../ux/ui-ux-pro-max/SKILL.md); add process only for unresolved journeys |
 | Fix mobile/tablet layout | [responsive-design](../responsive/responsive-design/SKILL.md), [ui-ux-pro-max](../ux/ui-ux-pro-max/SKILL.md), [web-design-guidelines](../review/web-design-guidelines/SKILL.md) for affected layout checks |
-| Improve or review animations | [design-motion-principles](../motion/design-motion-principles/SKILL.md) |
+| Improve or review animations, including Motion for React / Framer Motion | [design-motion-principles](../motion/design-motion-principles/SKILL.md) |
 | Audit the entire UI | [web-design-guidelines](../review/web-design-guidelines/SKILL.md), [web-accessibility](../accessibility/web-accessibility/SKILL.md), [ui-ux-pro-max](../ux/ui-ux-pro-max/SKILL.md); browser evidence in a separate visual-QA phase |
 | Fix keyboard, semantics, contrast, or ARIA | [web-accessibility](../accessibility/web-accessibility/SKILL.md) |
 | Optimize React / Next dashboard | [react-best-practices](../performance/react-best-practices/SKILL.md), [web-design-guidelines](../review/web-design-guidelines/SKILL.md) for interaction regressions |

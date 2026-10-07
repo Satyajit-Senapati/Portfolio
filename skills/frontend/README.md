@@ -13,6 +13,7 @@ Create a landing page using the frontend collection.
 Use $taste-skill and $frontend-design to refine this page.
 Use $responsive-design to fix the mobile layout.
 Use $design-motion-principles to improve menu transitions.
+Use $design-motion-principles to implement Motion for React exits and shared layout.
 Use $web-design-guidelines and $web-accessibility to audit the UI.
 Use $react-best-practices to investigate slow dashboard filtering.
 Use $visual-qa to check the changed page across viewports.
@@ -113,6 +114,12 @@ Use $stitch-planning to document the chosen screen for implementation in this re
 ```
 
 The official Stitch plugins offer a larger service integration and build suite. This package includes the planning references it needs, with host-aware instructions; automatic build loops, React converters, upload scripts, and global installers are outside its scope.
+
+## Motion for React coverage
+
+`design-motion-principles` covers motion purpose, timing, easing, interruption, and verification. Its [Motion for React integration reference](motion/design-motion-principles/references/motion-react.md) adds current package/import guidance, `AnimatePresence`, shared layout, reduced-motion behavior, motion values, and bundle choices. Framer Motion requests route to this same specialist.
+
+The integration reference is authored from public [Motion documentation](https://motion.dev/docs/react); the original upstream motion guides remain unchanged. It is selected for React tasks only. Copying the collection provides instructions; the target project chooses CSS, its existing library, or a justified Motion dependency. The collection does not install animation libraries automatically.
 
 ## Upstream content and tools
 

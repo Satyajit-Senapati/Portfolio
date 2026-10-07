@@ -11,6 +11,8 @@ For each motion, state what relationship or state change it explains, how often 
 
 Prefer CSS transitions or the existing motion library. Animate transform/opacity when appropriate; measure expensive layout, blur, or paint effects. Preserve a usable final state if animation fails. Avoid delaying input, hiding essential content behind a reveal, or adding motion solely to increase a preset intensity.
 
+For React projects using or considering Motion for React (formerly Framer Motion), read the [integration reference](references/motion-react.md). It covers package selection, presence, shared layout, reduced motion, and bundle choices. Check the installed version before applying examples; current API documentation governs implementation where an older upstream recipe conflicts. Other frameworks keep their existing motion approach.
+
 Honor `prefers-reduced-motion` with an immediate or restrained equivalent. Keyboard users must receive immediate focus and state feedback; do not delay focus until an entrance finishes. Do not treat upstream "never animate keyboard actions" as a reason to remove useful non-delaying feedback. Avoid flashing, perpetual distraction, and hover-only information.
 
 Verify initial load, enter/exit, rapid toggles, cancellation, route/unmount cleanup, touch, keyboard, and reduced motion as relevant. Inspect actual frames in browser tooling when available. In an audit, report trigger, observed issue, impact, recommended change, and verification evidence.

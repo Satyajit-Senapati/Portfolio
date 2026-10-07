@@ -10,6 +10,7 @@ Original sources reviewed and retrieved on 2026-09-29; the Stitch planning refer
 | UX process | [richhemsley3/claude-design-skills](https://github.com/richhemsley3/claude-design-skills) | `1185d0d84974eaed6e927b953243c96754de02b6` | MIT; stage-specific source guides and supporting resources |
 | Stitch visual planning | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | `0337446dadde6f8c94210444e2aa9d546126480f` | Apache-2.0; generate-design, manage-design-system, enhance-prompt, design-md, and site-md guides with selected examples/references and original license |
 | Motion | [kylezantos/design-motion-principles](https://github.com/kylezantos/design-motion-principles) | `4a9ca879f24a361f4dca4174fe2da0f67b5ddee3` | MIT; source workflows/references and license |
+| Motion for React integration | [Official Motion documentation](https://motion.dev/docs/react) | Living references checked on 2026-10-07 | Authored integration reference; public documentation linked, not vendored; no Motion+ examples or paid skill content included |
 | React performance / UI review | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | `063bee94c3f4df8453406c830b0a7df0f2860278` | MIT declared in repository README; original declaration retained as LICENSE-SOURCE.md (no standalone license file found in that snapshot) |
 | Interface checklist | [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines) | `e3d624baaf29dc1fc645aff3e38f03e564d2d6b1` | MIT; command.md and original LICENSE |
 | Accessibility | [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/), [ARIA APG](https://www.w3.org/WAI/ARIA/apg/patterns/) | Living references checked on review date | Original local workflow and concise checklist; standards linked, not vendored |
@@ -34,6 +35,7 @@ Decision: retain independently selected layers and original responsive/accessibi
 
 - Existing brand and user direction take precedence over upstream aesthetic defaults.
 - Motion presets do not automatically increase animation intensity; reduced motion and immediate focus remain baseline behavior.
+- Motion for React implementation uses the target's installed API and current public documentation where older cookbook recipes conflict. The adapter supports existing Framer Motion projects without requiring migration or installing a library for every motion task.
 - The process collection is staged, not an automatic end-to-end pipeline or delegation trigger.
 - React performance rules are filtered by the actual framework and version; a Vite app does not acquire Next.js APIs.
 - UI review can use a pinned offline checklist; fresh retrieval is reserved for requests needing current guidance.
