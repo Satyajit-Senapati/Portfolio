@@ -31,9 +31,7 @@
 
 An original portfolio in ink, lilac, and warm ivory. A custom digital avatar and **Woven Initials** identity introduce the person; real product previews, a career timeline, and interactive reference patterns show the work. The light theme is designed with the same care as the dark theme.
 
-<p align="center"><img src="./docs/portfolio-preview.jpg" alt="Portfolio hero with Satyajit Senapati's avatar, engineering introduction, and primary actions"></p>
-
-**[Explore the Portfolio](https://satyajit-senapati.github.io/Portfolio/)** · **[Download the Resume](./public/Satyajit-Senapati-Resume.pdf)** · **[Design Research](./docs/design-research.md)**
+**[Explore the Portfolio](https://satyajit-senapati.github.io/Portfolio/)** · **[Download the Resume](./public/Satyajit-Senapati-Resume.pdf)** · **[Design Notes](./docs/architecture.md#asset-provenance-and-brand-rules)**
 
 | Area                           | What it shows                                                                                                                                                |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -127,13 +125,26 @@ Vite uses a relative asset base, so the build works at a project Pages path or a
 | Browser metadata and structured data                               | `index.html`                             |
 | Downloadable resume                                                | `public/Satyajit-Senapati-Resume.pdf`    |
 | Social preview artwork and editable source                         | `public/og.png`, `scripts/social-card.html` |
-| Digital avatar and product previews                                | `public/images/`                         |
+| Digital avatar, product previews, and project icons                 | `public/images/`                         |
 | Vector identity and browser icon                                   | `public/brand/` and `public/favicon.svg` |
 | Self-hosted typography and license                                 | `public/fonts/`                          |
 
 The resume lives in `public/Satyajit-Senapati-Resume.pdf` and is linked for download in the hero and footer, with a view link in Experience. It includes contact information. DataRevia and NEVRI link to their live apps; Orqalis and PracticeLab link to their public repositories.
 
 The social card is a 1200 × 630 PNG composed from the original avatar, logo, and local Manrope font. With the dev server running, open [the card source](http://localhost:4000/scripts/social-card.html) and click the image to download a regenerated `og.png`. Replace `public/og.png` with that file; site validation checks its dimensions against the Open Graph metadata.
+
+Product previews are WebP captures with matching 1440 × 810 (16:9) dimensions. Keep both hero columns visible when refreshing NEVRI, and exclude the section below its hero. The site uses the original Orqalis and PracticeLab SVG icons. See the [asset notes](docs/architecture.md#asset-provenance-and-brand-rules) for sources and brand rules.
+
+## Documentation
+
+| Guide | Purpose |
+| --- | --- |
+| [README](README.md) | Setup, validation, deployment, and content maintenance |
+| [Architecture and Design](docs/architecture.md) | Site behavior, design conventions, brand rules, and asset provenance |
+| [Frontend Skills](skills/frontend/README.md) | Portable skill selection, invocation, and reuse |
+| [Skill Sources](skills/frontend/SOURCES.md) | Pinned upstream versions, licenses, and adaptation decisions |
+
+Use root `.tmp-*` folders for temporary captures and audit output. Build output and browser reports are ignored; remove them when finished. Published assets should be consumed by the site or its documented tooling.
 
 ## Project Structure
 
@@ -146,12 +157,12 @@ public/
   favicon.svg              Woven Initials variant optimized for small sizes
   brand/                   original tile, standalone, and monochrome marks
   fonts/                   Manrope variable font and OFL license
-  images/                  generated avatar and real product previews
+  images/                  avatar, WebP product previews, and SVG project icons
   og.png                   social preview card
   Satyajit-Senapati-Resume.pdf
 scripts/prepare-pages.mjs  deployment metadata generation
 .github/workflows/deploy.yml
 docs/architecture.md
-docs/design-research.md
-docs/portfolio-preview.jpg  desktop hero shown in this README
+skills/frontend/          portable skills, source references, and validators
+.agents/skills/           native skill entrypoints
 ```

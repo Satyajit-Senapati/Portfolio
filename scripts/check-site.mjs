@@ -21,6 +21,7 @@ for (const asset of [
   "og.png",
   "Satyajit-Senapati-Resume.pdf",
   "images/satyajit-avatar.webp",
+  "images/satyajit-avatar.png",
   "images/datarevia-preview.webp",
   "images/nevri-preview.webp",
   "images/orqalis-icon.svg",

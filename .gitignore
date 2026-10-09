@@ -1,7 +1,10 @@
 node_modules/
 dist/
-.tmp-pdf/
-.tmp-audit/
+/.tmp*/
+/artifacts/
+/playwright-report/
+/test-results/
+/coverage/
 *.tsbuildinfo
 .DS_Store
 Data_Engineer_v4.pdf
