@@ -17,6 +17,8 @@ export type Project = {
   technologies: string[];
   repository?: string;
   demo?: string;
+  icon?: string;
+  preview?: { src: string; width: number; height: number; alt: string };
 };
 
 export type ArchitecturePattern = {
@@ -143,6 +145,12 @@ export const liveProjects = [
     ],
     technologies: ["Firebase", "Web", "Android"],
     demo: "https://nevri-notes.web.app/",
+    preview: {
+      src: "./images/nevri-preview.webp",
+      width: 1440,
+      height: 810,
+      alt: "NEVRI homepage hero with its complete notes workspace preview",
+    },
   },
   {
     name: "DataRevia",
@@ -157,6 +165,12 @@ export const liveProjects = [
     ],
     technologies: ["React", "TypeScript", "IndexedDB"],
     demo: "https://datarevia.sattylabs.workers.dev/",
+    preview: {
+      src: "./images/datarevia-preview.webp",
+      width: 1440,
+      height: 810,
+      alt: "DataRevia homepage introducing its technical interview learning workspace",
+    },
   },
 ] satisfies (Project & { demo: string })[];
 
@@ -174,6 +188,7 @@ export const localProjects = [
     ],
     technologies: ["Multi-Agent Systems", "MCP", "Developer Tooling"],
     repository: "https://github.com/Satyajit-Senapati/Orqalis",
+    icon: "./images/orqalis-icon.svg",
   },
   {
     name: "PracticeLab",
@@ -188,6 +203,7 @@ export const localProjects = [
     ],
     technologies: ["Python", "Pyodide", "Node.js", "Browser Workers"],
     repository: "https://github.com/Satyajit-Senapati/PracticeLab",
+    icon: "./images/practicelab-icon.svg",
   },
 ] satisfies (Project & { repository: string })[];
 

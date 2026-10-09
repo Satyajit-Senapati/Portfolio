@@ -409,10 +409,10 @@ function Projects() {
                       <small>{new URL(project.demo).hostname}</small>
                     </div>
                     <img
-                      src={`./images/${project.name === "DataRevia" ? "datarevia" : "nevri"}-preview.webp`}
-                      width="1200"
-                      height="833"
-                      alt={`Visit ${project.name} website`}
+                      src={project.preview.src}
+                      width={project.preview.width}
+                      height={project.preview.height}
+                      alt={project.preview.alt}
                       loading="lazy"
                     />
                   </div>
@@ -474,7 +474,13 @@ function Projects() {
               <article className="local-project-card reveal" key={project.name}>
                 <div className="local-project-top">
                   <span className="tool-symbol" aria-hidden="true">
-                    {index === 0 ? "⌘" : ">_"}
+                    <img
+                      src={project.icon}
+                      width="44"
+                      height="44"
+                      alt=""
+                      loading="lazy"
+                    />
                   </span>
                   <span className="section-kicker">
                     {index === 0 ? "ORCHESTRATION" : "HANDS-ON PRACTICE"}

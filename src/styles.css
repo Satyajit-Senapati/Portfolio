@@ -664,6 +664,8 @@ summary::marker {
   background: var(--surface);
 }
 .project-visual {
+  --preview-height: 480px;
+  --preview-inset: 40px;
   position: relative;
   min-height: 420px;
   overflow: hidden;
@@ -826,14 +828,17 @@ summary::marker {
 }
 .browser-frame {
   position: absolute;
-  left: 45px;
-  top: 87px;
-  width: 600px;
+  left: 50%;
+  top: 50%;
+  width: min(
+    calc(100% - var(--preview-inset) * 2),
+    calc((var(--preview-height) - 186px) * 16 / 9)
+  );
   border: 1px solid #f9f6ee;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 28px 45px #66544035;
-  transform: rotate(-3deg);
+  transform: translate(-50%, -50%) rotate(-3deg);
   transition: transform 0.5s;
 }
 .browser-bar {
@@ -856,11 +861,13 @@ summary::marker {
   margin-left: 25px;
 }
 .browser-frame img {
-  width: 600px;
+  width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 .project-visual:hover .browser-frame {
-  transform: translateY(-5px) rotate(-1deg);
+  transform: translate(-50%, calc(-50% - 5px)) rotate(-1deg);
 }
 .local-projects {
   margin-top: 64px;
@@ -902,15 +909,18 @@ summary::marker {
   margin-bottom: 30px;
 }
 .tool-symbol {
-  width: 38px;
-  height: 38px;
-  background: var(--soft);
-  color: var(--accent);
-  border-radius: 9px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  overflow: hidden;
   display: grid;
   place-items: center;
-  font-size: 22px;
-  font-family: Consolas, monospace;
+}
+.tool-symbol img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .local-project-top .section-kicker {
   margin: 0;
@@ -1842,14 +1852,6 @@ summary::marker {
   .featured-project {
     grid-template-columns: 1fr 1fr;
   }
-  .browser-frame {
-    left: 30px;
-    top: 100px;
-    width: 510px;
-  }
-  .browser-frame img {
-    width: 510px;
-  }
   .local-project-card {
     padding: 25px;
   }
@@ -2184,13 +2186,9 @@ summary::marker {
     width: 17px;
     height: 17px;
   }
-  .browser-frame {
-    top: 55px;
-    left: 35px;
-    width: 450px;
-  }
-  .browser-frame img {
-    width: 450px;
+  .project-visual {
+    --preview-height: 330px;
+    --preview-inset: 28px;
   }
   .project-copy {
     padding: 27px;
@@ -2669,9 +2667,7 @@ summary::marker {
   background: radial-gradient(ellipse at 25% 20%, #605177, #373041 70%);
 }
 .datarevia-art .browser-frame {
-  transform: rotate(3deg);
-  top: 95px;
-  left: 42px;
+  transform: translate(-50%, -50%) rotate(3deg);
 }
 .datarevia-art .browser-bar {
   background: #202638;
@@ -2683,15 +2679,11 @@ summary::marker {
   color: #a9afbe;
 }
 .project-visual:hover .datarevia-art .browser-frame {
-  transform: translateY(-5px) rotate(1deg);
+  transform: translate(-50%, calc(-50% - 5px)) rotate(1deg);
 }
 @media (max-width: 760px) {
   .datarevia-art {
     min-height: 330px;
-  }
-  .datarevia-art .browser-frame {
-    top: 57px;
-    left: 27px;
   }
 }
 @media (max-width: 600px) {

@@ -47,4 +47,8 @@ The social preview in `public/og.png` is a dedicated 1200 × 630 ink-and-lilac c
 
 The preview images are browser captures of the owner’s public [DataRevia](https://datarevia.sattylabs.workers.dev/) and [NEVRI](https://nevri-notes.web.app/) sites. DataRevia replaces the former InterviewOS name and URL. NEVRI’s description reflects its published web availability and Android testing status.
 
+The captures were refreshed on 2026-10-09 in Chromium at a shared 1440 × 810 (16:9) viewport, after fonts and images loaded. NEVRI includes the header and both hero columns, with a bottom gutter and no following section. DataRevia shows its current centered introduction. PNG originals and WebP delivery copies live in `public/images/`; their dimensions and descriptions are declared in project content. Both browser frames use the same responsive dimensions and scale the complete screenshots without stretching or clipping.
+
+The local project icons use the owner's original SVG assets, copied without changing their colors or geometry: Orqalis from `web/public/assets/orqalis.svg` in its repository, and PracticeLab from `docs/assets/practice-lab-mark.svg` in its repository. Portfolio delivery copies are `public/images/orqalis-icon.svg` and `public/images/practicelab-icon.svg`.
+
 Manrope is self-hosted from Google Fonts. Its SIL Open Font License is included at `public/fonts/OFL.txt`.

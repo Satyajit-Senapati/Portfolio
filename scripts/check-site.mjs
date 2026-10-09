@@ -23,6 +23,8 @@ for (const asset of [
   "images/satyajit-avatar.webp",
   "images/datarevia-preview.webp",
   "images/nevri-preview.webp",
+  "images/orqalis-icon.svg",
+  "images/practicelab-icon.svg",
   "fonts/manrope-latin.woff2",
   "brand/satyajit-mark.svg",
   "brand/satyajit-tile.svg",

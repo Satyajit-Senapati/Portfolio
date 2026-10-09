@@ -12,6 +12,8 @@ The page moves from personal identity to selected products, about, capabilities,
 
 The interface uses ink surfaces, soft lilac, and warm ivory. Self-hosted Manrope provides a consistent type hierarchy. The selected Woven Initials logo and a custom digital avatar create a personal identity. Orbital linework around the portrait, restrained ambient light, and a dotted architecture canvas add texture without competing with content. Featured products use real public website captures in browser frames.
 
+Project content declares screenshot dimensions and descriptions, plus the local products' original SVG icons. Both featured captures use a 1440 × 810 (16:9) viewport and the same responsive browser-frame sizing. The full screenshots fit within the artwork across breakpoints without stretching or clipping. NEVRI's capture is limited to its full two-column hero and header.
+
 Theme colors are CSS custom properties. The content width is capped at 1240px. At 1050px, the navigation becomes a menu to avoid a cramped tablet header. At 760px, the hero and project rows become vertical, architecture stages become a sequence, and contact is simplified. Below 600px, expertise uses one column for readable descriptions and technologies. All layouts work down to 320px.
 
 The body fits the available document width, including the space occupied by non-overlay scrollbars at a 320px viewport. Header controls precede the navigation links in document and visual order, so opening the compact menu keeps its links next in the forward Tab sequence. The `#top` anchor belongs to the stationary page wrapper; the header remains sticky inside it. Header and footer top links therefore return to the document start.
